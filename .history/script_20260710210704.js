@@ -1,6 +1,6 @@
 /* HERO NAV*/
 var typed = new Typed('#text',{
-    strings:['Full Stack Developers.', 'Data Analyst.', 'Programmer','UI/UX Designer.        '],
+    strings:['Data Engineer.', 'Software Developers.', 'Programmer','UI/UX Designer.        '],
     typeSpeed: 100,
     backSpeed:100,
     loop:true,
