@@ -206,7 +206,7 @@ const projectsData = [
     desc: 'JATI (Jurnal Mahasiswa Teknik Informatika).',
     tech: ['Jurnal Ilmiah', 'Sistem Informasi', 'Waterfall'],
     slides: [
-      { img: 'images/sipalu.png', caption: 'Research overview and model architecture' }
+      { img: 'images/Sipalu.png', caption: 'Research overview and model architecture' }
     ],
     github: 'https://garuda.kemdiktisaintek.go.id/documents/detail/4704357'
   },
