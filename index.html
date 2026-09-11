@@ -1,802 +1,537 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Farhan Rizqullah Bagaskara — Software Engineer</title>
-<meta name="description" content="Portfolio Farhan Rizqullah Bagaskara, fresh graduate Teknik Informatika dengan keahlian Full Stack Web Development, Deep Learning, dan Computer Vision.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<style>
-  :root[data-print="cyan"]{
-    --bg:#0B1F33;--panel:#0F2A4A;--panel-2:#123457;
-    --ink:#EAF3FF;--ink-muted:#93AEC7;
-    --line:#2F5578;--line-strong:#4B7398;
-    --accent:#E8B33D;--accent-2:#6FD1D6;
-  }
-  :root[data-print="diazo"]{
-    --bg:#F3EFE4;--panel:#FFFFFF;--panel-2:#EAE3D2;
-    --ink:#12233A;--ink-muted:#5B6E82;
-    --line:#C7B98F;--line-strong:#A6975F;
-    --accent:#B4611E;--accent-2:#1F7A80;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farhan Rizqullah Bagaskara | Software Engineer</title>
+  <meta name="description" content="Portfolio of Farhan Rizqullah Bagaskara, an Informatics Engineering graduate focused on software engineering, data analytics, and AI-driven solutions.">
+  
+  <meta property="og:title" content="Farhan Rizqullah Bagaskara | Software Engineer">
+  <meta property="og:description" content="Portfolio of Farhan Rizqullah Bagaskara, focused on software engineering, data analytics, and AI-driven solutions.">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="images/Logo-FRB.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  *{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:'Space Grotesk',sans-serif; line-height:1.55;
-    transition:background .45s ease,color .45s ease;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Farhan Rizqullah Bagaskara",
+    "jobTitle": "Software Engineer",
+    "url": "https://farhanrbagask.github.io/webporto/",
+    "sameAs": [
+      "https://www.linkedin.com/in/farhan-rizqullah-bagaskara",
+      "https://github.com/farhanrbagask"
+    ]
   }
-  .mono{ font-family:'IBM Plex Mono',monospace; }
-  a{ color:inherit; }
-  img{ max-width:100%; display:block; }
-  .wrap{ max-width:1080px; margin:0 auto; padding:0 28px; position:relative; z-index:1; }
+  </script>
 
-  .gridpaper{
-    position:fixed;inset:0;z-index:0;pointer-events:none;
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:40px 40px; opacity:.18; transition:opacity .4s;
-  }
-
-  header.titleblock{
-    position:sticky;top:0;z-index:50;
-    background:color-mix(in srgb,var(--bg) 88%,transparent);
-    backdrop-filter:blur(6px); border-bottom:1px solid var(--line);
-    transition:background .45s ease;
-  }
-  .tb-row{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:14px 28px;max-width:1080px;margin:0 auto;gap:12px;
-  }
-  .tb-brand{ font-size:14px;letter-spacing:.04em;white-space:nowrap; }
-  .tb-brand b{ color:var(--accent); }
-  nav.tb-links{ display:flex;gap:22px;font-size:13px; }
-  nav.tb-links a{
-    text-decoration:none;color:var(--ink-muted);
-    border-bottom:1px solid transparent;padding-bottom:2px;
-    transition:color .2s,border-color .2s;
-  }
-  nav.tb-links a:hover,nav.tb-links a.active{ color:var(--ink);border-color:var(--accent); }
-
-  .tb-toggle{
-    display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink-muted);
-    border:1px solid var(--line);padding:6px 10px;cursor:pointer;background:transparent;
-    font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;white-space:nowrap;
-    transition:border-color .3s,color .3s;
-  }
-  .tb-toggle:hover{ border-color:var(--line-strong);color:var(--ink); }
-  .swatch-wrap{ display:flex;gap:5px; }
-  .sw{
-    width:10px;height:10px;border-radius:50%;border:1.5px solid var(--line-strong);
-    transition:background .3s,border-color .3s;
-  }
-  .sw.on{ border-color:var(--accent);background:var(--accent); }
-
-  .navbtn{
-    display:none;background:none;border:1px solid var(--line);color:var(--ink);
-    padding:8px 10px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:13px;
-    transition:border-color .2s;
-  }
-  .navbtn:hover{ border-color:var(--line-strong); }
-
-  .progress{ height:2px;background:var(--line); }
-  .progress > i{ display:block;height:100%;width:0%;background:var(--accent);transition:width .08s linear; }
-
-  .mobile-nav{
-    display:none;flex-direction:column;border-bottom:1px solid var(--line);
-    background:color-mix(in srgb,var(--bg) 96%,transparent);
-    overflow:hidden;max-height:0;transition:max-height .32s ease;
-  }
-  .mobile-nav.open{ max-height:360px; }
-  .mobile-nav a{
-    padding:12px 28px;font-size:14px;text-decoration:none;color:var(--ink-muted);
-    border-bottom:1px solid var(--line);transition:color .2s,background .2s;
-  }
-  .mobile-nav a:hover,.mobile-nav a.active{
-    color:var(--accent);
-    background:color-mix(in srgb,var(--accent) 6%,transparent);
-  }
-
-  .sheet{ position:relative;padding:96px 0 64px;border-bottom:1px solid var(--line); }
-  .sheet:last-of-type{ border-bottom:none; }
-  .sheet-label{
-    display:flex;align-items:center;gap:10px;margin-bottom:34px;
-    font-size:12px;letter-spacing:.08em;color:var(--ink-muted);
-  }
-  .sheet-label .num{ color:var(--accent); }
-  .sheet-label::after{ content:"";flex:1;height:1px;background:var(--line); }
-  .corner{ position:absolute;width:16px;height:16px;opacity:.6; }
-  .corner svg{ width:100%;height:100%;stroke:var(--line-strong); }
-  .corner.tl{ top:14px;left:14px; }
-  .corner.tr{ top:14px;right:14px;transform:scaleX(-1); }
-  h1,h2,h3{ margin:0 0 .4em;font-weight:600; }
-  p{ margin:0 0 1em;color:var(--ink-muted);max-width:64ch; }
-
-  /* scroll reveal */
-  .sheet{
-    opacity:0;transform:translateY(22px);
-    transition:opacity .48s cubic-bezier(.22,.6,.36,1),transform .48s cubic-bezier(.22,.6,.36,1);
-  }
-  .sheet.revealed{ opacity:1;transform:translateY(0); }
-
-  /* hero never hidden */
-  .hero{ min-height:88vh;display:flex;align-items:center;padding-top:60px;opacity:1!important;transform:none!important; }
-  .hero-grid{ display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center; }
-  .role-tag{ display:inline-block;font-size:12px;letter-spacing:.08em;color:var(--accent-2);border:1px solid var(--line);padding:5px 10px;margin-bottom:20px; }
-  .hero h1{ font-size:clamp(32px,5vw,58px);line-height:1.08;color:var(--ink); }
-  .cursorblink{ display:inline-block;width:3px;background:var(--accent);margin-left:4px;animation:blink 1s steps(1) infinite; }
-  @keyframes blink{ 50%{ opacity:0; } }
-  .hero p.lead{ font-size:16px;max-width:52ch; }
-  .cta-row{ display:flex;gap:14px;margin-top:26px;flex-wrap:wrap; }
-  .btn{
-    font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;
-    padding:12px 18px;border:1px solid var(--line-strong);background:transparent;color:var(--ink);
-    cursor:pointer;text-decoration:none;display:inline-block;transition:.2s;
-  }
-  .btn:hover{ border-color:var(--accent);color:var(--accent); }
-  .btn.primary{ background:var(--accent);border-color:var(--accent);color:#12233A; }
-  .btn.primary:hover{ opacity:.85;color:#12233A; }
-
-  .compass-wrap{ display:flex;justify-content:center; }
-  #compass{ width:220px;height:220px; }
-  #compass .needle{ transform-origin:110px 110px;transition:transform .08s linear; }
-
-  .about-grid{ display:grid;grid-template-columns:220px 1fr;gap:44px; }
-  .id-photo{ position:relative;border:1px solid var(--line-strong);padding:10px; }
-  .id-photo img{ filter:grayscale(.25) contrast(1.05); }
-  .id-photo figcaption{ font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ink-muted);margin-top:8px;letter-spacing:.05em; }
-  .stat-row{ display:flex;gap:36px;margin-top:26px;flex-wrap:wrap; }
-  .stat .num{ font-size:30px;font-weight:700;color:var(--accent);font-family:'IBM Plex Mono',monospace; }
-  .stat .label{ font-size:11.5px;color:var(--ink-muted);letter-spacing:.04em; }
-
-  /* skills */
-  .chip-row{ display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px; }
-  .chip{ position:relative;opacity:0;transform:translateY(10px); }
-  .chip.chip-in{ animation:chipIn .35s cubic-bezier(.22,.6,.36,1) forwards; }
-  @keyframes chipIn{ to{ opacity:1;transform:translateY(0); } }
-  .chip .tag{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;padding:9px 14px;
-    border:1px solid var(--line);cursor:default;color:var(--ink);display:inline-block;transition:.2s;
-  }
-  .chip:hover .tag{ border-color:var(--accent-2);color:var(--accent-2); }
-  .chip .tip{
-    position:absolute;bottom:calc(100% + 10px);left:0;width:260px;
-    background:var(--panel-2);border:1px solid var(--line-strong);padding:12px 14px;
-    font-size:12.5px;color:var(--ink-muted);opacity:0;transform:translateY(6px);
-    pointer-events:none;transition:.18s;z-index:5;line-height:1.5;
-  }
-  .chip:hover .tip{ opacity:1;transform:translateY(0); }
-
-  .approach-grid{ display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line); }
-  .approach-card{ background:var(--bg);padding:22px;transition:background .2s; }
-  .approach-card:hover{ background:var(--panel); }
-  .approach-card h3{ font-size:14.5px; }
-  .approach-card p{ font-size:13px;margin:0; }
-
-  .timeline{ position:relative;padding-left:26px; }
-  .timeline::before{ content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line); }
-  .tl-item{ position:relative;padding-bottom:34px;cursor:pointer; }
-  .tl-item:last-child{ padding-bottom:0; }
-  .tl-dot{
-    position:absolute;left:-26px;top:3px;width:11px;height:11px;
-    border:2px solid var(--accent);background:var(--bg);border-radius:50%;
-  }
-  .tl-item.open .tl-dot{ animation:dotPulse 2s ease-out infinite; }
-  @keyframes dotPulse{
-    0%  { box-shadow:0 0 0 0   color-mix(in srgb,var(--accent) 60%,transparent); }
-    60% { box-shadow:0 0 0 7px color-mix(in srgb,var(--accent) 0%,transparent); }
-    100%{ box-shadow:0 0 0 0   color-mix(in srgb,var(--accent) 0%,transparent); }
-  }
-  .tl-head{ display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap; }
-  .tl-head .yr{ font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-muted); }
-  .tl-body{ max-height:0;overflow:hidden;transition:max-height .38s ease; }
-  .tl-item.open .tl-body{ max-height:400px; }
-  .tl-body-in{ display:flex;gap:20px;padding-top:14px;flex-wrap:wrap; }
-  .tl-body-in img{ width:120px;border:1px solid var(--line); }
-  .tl-hint{ font-size:11px;color:var(--ink-muted);font-family:'IBM Plex Mono',monospace;margin-top:6px; }
-
-  .filter-row{ display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap; }
-  .filter-btn{
-    font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:none;border:1px solid var(--line);
-    color:var(--ink-muted);padding:8px 13px;cursor:pointer;transition:.2s;
-  }
-  .filter-btn.active,.filter-btn:hover{ border-color:var(--accent);color:var(--accent); }
-  .gallery{ display:grid;grid-template-columns:repeat(3,1fr);gap:16px; }
-  .g-item{ border:1px solid var(--line);overflow:hidden;cursor:pointer;background:var(--panel);position:relative; }
-  .g-item img{ width:100%;height:150px;object-fit:cover;filter:saturate(.85);transition:.3s; }
-  .g-item:hover img{ filter:saturate(1) brightness(1.05);transform:scale(1.03); }
-  .g-cap{ padding:10px 12px;font-size:12px;color:var(--ink-muted); }
-  .g-cap b{ color:var(--ink);display:block;font-size:12.5px;margin-bottom:2px; }
-  .stack-mini{ display:flex;flex-wrap:wrap;gap:5px;margin-top:6px; }
-  .sm-tag{ font-family:'IBM Plex Mono',monospace;font-size:10px;padding:2px 6px;border:1px solid var(--line);color:var(--ink-muted); }
-
-  .lightbox{
-    position:fixed;inset:0;background:rgba(5,12,20,.88);
-    display:none;align-items:center;justify-content:center;z-index:200;padding:30px;
-  }
-  .lightbox.show{ display:flex;animation:lbIn .24s cubic-bezier(.22,.6,.36,1); }
-  @keyframes lbIn{ from{ opacity:0; } to{ opacity:1; } }
-  .lightbox-inner{
-    max-width:820px;width:100%;background:var(--panel);border:1px solid var(--line-strong);
-    animation:lbScale .24s cubic-bezier(.22,.6,.36,1);
-    max-height:90vh;overflow-y:auto;
-  }
-  @keyframes lbScale{ from{ transform:scale(.95); } to{ transform:scale(1); } }
-  .lightbox-inner img{ width:100%;max-height:55vh;object-fit:contain;background:#000a14; }
-  .lightbox-meta{ padding:16px 20px 20px; }
-  .lb-title{ font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink);display:block;margin-bottom:6px; }
-  .lb-desc{ margin:0 0 12px;font-size:13px;color:var(--ink-muted);max-width:100%; }
-  .lb-tags{ display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px; }
-  .lb-tag{ font-family:'IBM Plex Mono',monospace;font-size:10.5px;padding:3px 8px;border:1px solid var(--accent-2);color:var(--accent-2); }
-  .lb-actions{ display:flex;gap:10px;flex-wrap:wrap; }
-  .lb-actions a{ font-size:12px; }
-  .lightbox-close{
-    position:absolute;top:26px;right:34px;color:#fff;
-    font-family:'IBM Plex Mono',monospace;cursor:pointer;font-size:13px;
-    border:1px solid #fff3;padding:6px 10px;transition:border-color .2s;
-  }
-  .lightbox-close:hover{ border-color:#fff8; }
-
-  .accordion-item{ border:1px solid var(--line);margin-bottom:10px; }
-  .acc-head{ display:flex;justify-content:space-between;gap:14px;align-items:center;padding:16px 18px;cursor:pointer; }
-  .acc-head:hover{ background:color-mix(in srgb,var(--accent) 4%,transparent); }
-  .acc-head h3{ font-size:14.5px;margin:0; }
-  .acc-head .plus{ font-family:'IBM Plex Mono',monospace;color:var(--accent);flex-shrink:0;transition:transform .25s; }
-  .accordion-item.open .plus{ transform:rotate(45deg); }
-  .acc-body{ max-height:0;overflow:hidden;transition:max-height .38s ease; }
-  .accordion-item.open .acc-body{ max-height:400px; }
-  .acc-body-in{ padding:0 18px 18px;display:flex;gap:18px;flex-wrap:wrap; }
-  .acc-body-in img{ width:140px;border:1px solid var(--line);flex-shrink:0; }
-  .acc-body-in p{ flex:1;min-width:220px;font-size:13.5px;margin:0; }
-
-  .contact-grid{ display:grid;grid-template-columns:1fr 1fr;gap:40px; }
-  table.tb-table{ width:100%;border-collapse:collapse;font-size:13.5px; }
-  table.tb-table td{ border:1px solid var(--line);padding:12px 14px; }
-  table.tb-table td.k{ font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-muted);width:34%; }
-  table.tb-table td.v{ cursor:pointer; }
-  table.tb-table td.v:hover{ color:var(--accent-2); }
-  .copied-flag{ font-size:10.5px;color:var(--accent-2);margin-left:8px;font-family:'IBM Plex Mono',monospace;opacity:0;transition:.2s; }
-  .copied-flag.show{ opacity:1; }
-
-  form.cform{ display:flex;flex-direction:column;gap:12px; }
-  form.cform input,form.cform textarea{
-    background:var(--panel);border:1px solid var(--line);color:var(--ink);padding:11px 13px;
-    font-family:'Space Grotesk',sans-serif;font-size:13.5px;transition:border-color .2s;width:100%;
-  }
-  form.cform input:focus,form.cform textarea:focus{ outline:none;border-color:var(--accent-2); }
-  .form-msg{ font-size:12px;font-family:'IBM Plex Mono',monospace;min-height:16px; }
-  .form-msg.ok{ color:var(--accent-2); }
-  .form-msg.err{ color:#e05a5a; }
-
-  footer{ text-align:center;padding:26px;font-size:11.5px;color:var(--ink-muted);font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--line); }
-
-  @media(max-width:820px){
-    .hero-grid,.about-grid,.contact-grid{ grid-template-columns:1fr; }
-    .compass-wrap{ order:-1;margin-bottom:20px; }
-    .approach-grid,.gallery{ grid-template-columns:1fr 1fr; }
-    nav.tb-links{ display:none; }
-    .navbtn{ display:inline-block; }
-    .mobile-nav{ display:flex; }
-    .label-text{ display:none; }
-  }
-  @media(max-width:520px){
-    .approach-grid,.gallery{ grid-template-columns:1fr; }
-    .about-grid{ grid-template-columns:1fr; }
-    .id-photo{ width:160px; }
-    .chip .tag{ font-size:11px;padding:7px 11px; }
-    .lightbox-inner img{ max-height:45vw; }
-    .lightbox-close{ top:12px;right:12px; }
-    form.cform input,form.cform textarea{ font-size:13px; }
-    .contact-grid{ grid-template-columns:1fr; }
-    .tb-row{ gap:8px; }
-  }
-  @media(prefers-reduced-motion:reduce){
-    html{ scroll-behavior:auto; }
-    *{ animation-duration:.001ms!important;transition-duration:.001ms!important; }
-  }
-</style>
 </head>
-<body data-print="cyan">
-<div class="gridpaper"></div>
+<body>
 
-<header class="titleblock">
-  <div class="tb-row">
-    <div class="tb-brand mono"><b>F.R.B</b> — PORTOFOLIO TEKNIK</div>
-    <nav class="tb-links" id="tbLinks">
-      <a href="#hero">Home</a>
-      <a href="#about">Profil</a>
-      <a href="#skills">Keahlian</a>
-      <a href="#education">Edukasi</a>
-      <a href="#work">Karya</a>
-      <a href="#research">Riset</a>
-      <a href="#contact">Kontak</a>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">Farhan Portfolio.</a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+      <button class="btn btn-secondary" id="mobileThemeToggle" style="width: 100%; margin-top: 10px;">Toggle Theme</button>
     </nav>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <button class="tb-toggle mono" id="printToggle" title="Ganti gaya cetak" aria-pressed="false">
-        <span class="swatch-wrap" aria-hidden="true">
-          <span class="sw on" id="swCyan"></span>
-          <span class="sw" id="swDiazo"></span>
-        </span>
-        <span class="label-text" id="toggleLabel">CYANOTYPE</span>
-      </button>
-      <button class="navbtn mono" id="navbtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    </div>
-  </div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-    <a href="#hero">Home</a>
-    <a href="#about">Profil</a>
-    <a href="#skills">Keahlian</a>
-    <a href="#education">Edukasi</a>
-    <a href="#work">Karya</a>
-    <a href="#research">Riset</a>
-    <a href="#contact">Kontak</a>
-  </nav>
-  <div class="progress"><i id="progressBar"></i></div>
-</header>
+  </header>
 
-<!-- SHEET 01 — COVER -->
-<section class="sheet hero revealed" id="hero">
-  <div class="wrap">
-    <div class="corner tl"><svg viewBox="0 0 16 16" fill="none"><path d="M1 15V1H15" stroke-width="1.4"/></svg></div>
-    <div class="corner tr"><svg viewBox="0 0 16 16" fill="none"><path d="M1 15V1H15" stroke-width="1.4"/></svg></div>
-    <div class="hero-grid">
-      <div>
-        <span class="role-tag mono">SHEET 01 / SOFTWARE ENGINEER</span>
-        <h1>Farhan Rizqullah Bagaskara<span class="cursorblink">&nbsp;</span></h1>
-        <p class="lead">Fresh graduate Teknik Informatika dengan fokus Full Stack Web Development dan Artificial Intelligence — merancang sistem yang scalable dan mengubah data menjadi keputusan yang terukur.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="#contact">Hubungi Saya</a>
-          <a class="btn" href="#" id="downloadCv">Unduh CV ↓</a>
-          <a class="btn" href="#work">Lihat Karya</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Building Software.<br>Analyzing Data.<br>Solving Real Problems.</h1>
+          <p class="hero-lead">Hi, I'm Farhan Rizqullah Bagaskara, an Informatics Engineering graduate focused on software engineering, data analytics, and AI-driven solutions.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#" id="downloadCv" class="btn btn-secondary">Download CV</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:farhanbagask@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/fotoProfilSaya.jpeg" alt="Farhan Rizqullah Bagaskara">
         </div>
       </div>
-      <div class="compass-wrap">
-        <svg id="compass" viewBox="0 0 220 220" fill="none" role="img" aria-label="Compass decoration">
-          <circle cx="110" cy="110" r="95" stroke="var(--line-strong)" stroke-width="1"/>
-          <circle cx="110" cy="110" r="70" stroke="var(--line)" stroke-width="1"/>
-          <g class="mono" font-size="9" fill="var(--ink-muted)">
-            <text x="105" y="24">N</text><text x="105" y="202">S</text>
-            <text x="196" y="114">E</text><text x="16" y="114">W</text>
-          </g>
-          <g class="needle" id="needle">
-            <line x1="110" y1="110" x2="110" y2="40" stroke="var(--accent)" stroke-width="2.5"/>
-            <line x1="110" y1="110" x2="110" y2="175" stroke="var(--ink-muted)" stroke-width="2"/>
-          </g>
-          <circle cx="110" cy="110" r="4" fill="var(--accent)"/>
-        </svg>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a fresh graduate in Informatics Engineering from Universitas Muhammadiyah Gresik with a concentration in Software Engineering.</p>
+            <p>I have experience building end-to-end web applications, designing relational database schemas, and training Deep Learning models for data-driven research. I enjoy the process of turning complex problems into scalable software solutions.</p>
+            <p>Outside of writing code, I have served as the President of the Informatics Student Association. This experience shaped my ability to manage teams, coordinate projects, and communicate effectively across different roles.</p>
+          </div>
+          <div class="quick-stats">
+            <div class="stat-item">
+              <div class="stat-num" data-target="3.66">0.00</div>
+              <div class="stat-label">GPA (Out of 4.00)</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="3">0</div>
+              <div class="stat-label">Areas of Expertise</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="5">0</div>
+              <div class="stat-label">Technical Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Continuous Learner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <div class="container">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/LOGOOOO.jpeg" alt="Satlantas Polres Gresik"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Staff Unit Kamsel</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">Satlantas Polres Gresik</div>
+              </div>
+            </div>
+            <span class="timeline-date">2024 — Now.</span>
+            <p class="timeline-desc">Managed Android Enterprise MDM for centralized device provisioning, application management, security policies, user access, and device compliance across 16 Polsek. Supported digital communication and social media operations through content planning, copywriting, visual production, and daily performance reporting.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/SISILOGO.jpg" alt="PT. Sinergi Informatika Semen Indonesia"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Commercial Account Intern</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">PT. Sinergi Informatika Semen Indonesia </div>
+              </div>
+            </div>
+            <span class="timeline-date">Jan 2020 — March 2020.</span>
+            <p class="timeline-desc">Supported commercial and digital marketing activities through social media management, web content creation, and promotional materials. Gained practical exposure to business processes, customer communication, and enterprise technology solutions, including basic SAP ERP concepts.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/SIGLOGO.png" alt="Semen Indonesia Group"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Unit Of ICT Services Intern</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">PT Semen Indonesia (Persero) Tbk.</div>
+              </div>
+            </div>
+            <span class="timeline-date">Okt 2019 — Des 2019.</span>
+            <p class="timeline-desc">Provided IT support for end users, including hardware and software troubleshooting, printer support, and basic network monitoring. Assisted the ICT Services team in maintaining IT operations and resolving day-to-day technical issues across the Main Office.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div id="technicalSkillsList"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="container">
+
+        <!-- ① Featured Projects -->
+        <h2>Featured Projects</h2>
+        <div class="projects-grid" style="margin-bottom: 6rem;">
+
+          <!-- Project 1 -->
+          <div class="project-card lb-trigger" data-id="1" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-1">
+              <div class="pc-slide active">
+                <img src="images/web-pusaka/landing-Pages.png" alt="Traffic System - Main View">
+                <div class="pc-slide-caption">Main dashboard </div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/web-pusaka/landing-Pages.png" alt="Traffic System - Login">
+                <div class="pc-slide-caption"></div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Main Platform - Web Application</span>
+              <h3>Pusaka - Pusat Alat Tulis Kantor HIMATIF</h3>
+              <p class="pc-desc">Website ini merupakan media informasi badan usaha HIMATIF yang menyediakan layanan alat tulis kantor (ATK), printing, fotokopi, percetakan, dan kebutuhan administrasi lainnya. Website ini hadir untuk memudahkan mahasiswa dan masyarakat memperoleh layanan secara cepat, praktis, dan efisien.</p>
+              <span class="pc-tech">PHP Native &bull; MySQL &bull; Javascript &bull; HTML/CSS</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card lb-trigger" data-id="2" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-2">
+              <div class="pc-slide active">
+                <img src="images/cnn-xception-detection/dashboard-pages.png" alt="K-Means Clustering">
+                <div class="pc-slide-caption">Machine Learning - Deep Learning</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Deep Learning CNN Xception - Web Application</span>
+              <h3>CNN Xception for AI Generated Image Detection
+              </h3>
+              <p class="pc-desc">Project ini merupakan implementasi Deep Learning berbasis Convolutional Neural Network (CNN) untuk mendeteksi apakah sebuah gambar merupakan gambar asli atau gambar yang dihasilkan oleh Artificial Intelligence.</p>
+              <span class="pc-tech">Laravel &bull; PHP &bull; Python &bull; CNN (Xception) &bull; Numpy &bull; Scikit-learn Pandas &bull;</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card lb-trigger" data-id="3" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-3">
+              <div class="pc-slide active">
+                <img src="images/weighted-moving-averages/login-pages.png" alt="MDM System">
+                <div class="pc-slide-caption">Forecasting - Web Application</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Forecasting - Web Application</span>
+              <h3>Sistem Forecasting Penjualan Kopi -  Kedai Kopi</h3>
+              <p class="pc-desc">Aplikasi web untuk memprediksi penjualan menggunakan metode Weighted Moving Average (WMA).
+                                Project ini dibangun dengan Laravel dan dilengkapi fitur pengelolaan data penjualan, perhitungan prediksi, evaluasi akurasi menggunakan MAPE (Mean Absolute Percentage Error), serta export hasil ke Excel.</p>
+              <span class="pc-tech">Laravel &bull; MySQL &bull; PHP</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card lb-trigger" data-id="4" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-4">
+              <div class="pc-slide active">
+                <img src="images/prediksi-kerusakan-laptop/login-pages.png" alt="Pusaka Main Content">
+                <div class="pc-slide-caption">Data Mining - Web Application</div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/weighted-moving-averages/landing-pages.png" alt="Pusaka Landing Page">
+                <div class="pc-slide-caption">Data Mining - Web Application</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Data Mining - Web Application</span>
+              <h3>Prediksi Kerusakan Laptop - Naive Bayes</h3>
+              <p class="pc-desc">Aplikasi web untuk melakukan prediksi kerusakan laptop menggunakan algoritma Naive Bayes berdasarkan data gejala atau kondisi perangkat. 
+                Aplikasi ini dibangun menggunakan Laravel sebagai framework pengembangan web dan MySQL sebagai database. Sistem menyediakan pengelolaan data latih, data uji, proses perhitungan Naive Bayes, hasil prediksi, serta detail perhitungan probabilitas yang digunakan dalam menentukan jenis kerusakan laptop.</p>
+              <span class="pc-tech">Laravel &bull; JavaScript &bull; MySQL</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card lb-trigger" data-id="5" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-5">
+              <div class="pc-slide active">
+                <img src="images/mdm/mdm2.png" alt="Pusaka Main Content">
+                <div class="pc-slide-caption">Main platform — structured data display &amp; navigation</div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/mdm/mdm1.png" alt="Pusaka Landing Page">
+                <div class="pc-slide-caption">Mobile Device Management System</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">SaaS (Software as a Service)</span>
+              <h3>Mobile Device Management System</h3>
+              <p class="pc-desc">Conversion-focused landing page and main content interface with multi-level navigation and structured data display.</p>
+              <span class="pc-tech">Airdroid</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ② Research & Publications -->
+        <h2>Research &amp; Publications</h2>
+        <div class="featured-project">
+          <div class="fp-image">
+            <img src="images/sipalu.png" alt="AI Generated Image Detection">
+          </div>
+          <div class="fp-content">
+            <h3>Perancangan Sistem Integrasi Data Pelanggaran Lalu Lintas Berbasis Web Dengan Metode Waterfall Di Pos Satlantas Pada Kawasan Tertib Lalu Lintas Polres Gresik
+
+</h3>
+            <p class="fp-desc">JATI (Jurnal Mahasiswa Teknik Informatika).</p>
+            <div class="fp-tech">
+              <span>Jurnal Ilmiah</span>
+              <span>Sistem Informasi</span>
+              <span>Waterfall</span>
+            </div>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <button class="btn btn-secondary lb-trigger" data-id="0">View Details</button>
+              <a href="https://garuda.kemdiktisaintek.go.id/documents/detail/4704357" class="btn btn-primary" target="_blank" rel="noopener" id="pubLink0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Publication
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & ORGANIZATION (Merged) -->
+    <section id="education" class="reveal">
+      <div class="container">
+        <!-- Education Sub-section -->
+        <div class="edu-section-header">
+          <h2>Education &amp; Organization</h2>
+        </div>
+        
+        <div class="edu-tabs">
+          <button class="edu-tab-btn active" data-tab="education">Education</button>
+          <button class="edu-tab-btn" data-tab="organization">Organization</button>
+        </div>
+
+        <!-- Education Tab -->
+        <div class="edu-tab-content active" id="tab-education">
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-logo">
+                <img src="images/image.png" alt="Universitas Muhammadiyah Gresik Logo">
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2021 — 2025</span>
+                <h3 class="edu-role">Bachelor of Informatics Engineering</h3>
+                <div class="edu-org">Universitas Muhammadiyah Gresik</div>
+                <p class="edu-desc"><strong>Concentration:</strong> Software Engineering<br><strong>GPA:</strong> 3.66 / 4.00<br><br>Mata Kuliah Relevan : Rekayasa Perangkat Lunak, Analisis dan Perancangan Sistem, Rekayasa Kebutuhan, Pemrograman Web, Pemrograman Berorientasi Objek, Pemrograman Terstruktur, Basis Data, Basis Data Lanjut, Manajemen Kualitas Perangkat Lunak.</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-logo">
+                <img src="images/SMKN1LMG.png" alt="SMKN 1 Lamongan Logo">
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2019 — 2021</span>
+                <h3 class="edu-role">Multimedia (Information &amp; Communication Technology)</h3>
+                <div class="edu-org">SMKN 1 Lamongan</div>
+                <p class="edu-desc">Built a foundation in digital technology, multimedia, and creative problem-solving, which sparked an interest in software engineering and interface design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organization Tab -->
+        <div class="edu-tab-content" id="tab-organization">
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-logo">
+                <div class="timeline-logo-placeholder"><img src="images/Logo-Himatif.png" alt="Himatif UMG"></div>
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2021 — 2024</span>
+                <h3 class="edu-role">Ketua Umum Himpunan Mahasiswa Teknik Informatika UMG</h3>
+                <div class="edu-org">Universitas Muhammadiyah Gresik</div>
+                <p class="edu-desc">Led the Informatics Student Association (HIMATIF) in planning, coordinating, and evaluating organizational initiatives aimed at supporting student development in both academic and non-academic areas. Responsible for managing organizational operations, aligning team objectives, and fostering collaboration across divisions to ensure the effective execution of programs and activities.
+                  During my tenure, I oversaw the implementation of 35 organizational programs, initiated the East Java Information Technology Week focused on Artificial Intelligence (AI), and led community engagement initiatives to promote digital literacy and technology awareness among high school students. These experiences strengthened my leadership, strategic planning, project management, communication, analytical thinking, and problem-solving capabilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONORS / PENGHARGAAN -->
+    <section id="honors" class="reveal">
+      <div class="container">
+        <h2>Honors &amp; Awards</h2>
+        <p class="text-muted" style="margin: -1.25rem 0 2.5rem; font-size: 0.9375rem;">Recognition received throughout academic and professional journey.</p>
+        <div class="honors-grid">
+
+          <!-- Award 1 -->
+          <div class="award-card">
+            <div class="award-photo">
+              <img src="images/Award.png" alt="Penerimaan Penghargaan 1">
+            </div>
+            <div class="award-meta">
+              <span class="award-category"></span>
+              <h3 class="award-title">DEDIKASI KEPADA POLRES GRESIK MEMBANTU PERSONIL SATLANTAS POLRES GRESIK DALAM OPERASI KETUPAT SEMERU 2026</h3>
+              <p class="award-desc">Received an appreciation award from Gresik Police for contributing to the implementation of Operation Ketupat Semeru 2026. Supported traffic management, public information dissemination, and operational activities within the Traffic Unit, while demonstrating responsibility, teamwork, and commitment to public service during the Eid holiday security operation.</p>
+              <div class="award-footer">
+                <div class="award-issuer">
+                  POLRES RESOR GRESIK
+                </div>
+                <span class="award-year"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Let's Build Something Useful.</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Whether you're looking for a developer, discussing a project, or simply want to connect, feel free to reach out.</p>
+            
+            <ul class="contact-list">
+              <li>
+                <span class="cl-label">EMAIL</span>
+                <span class="cl-value"><a href="mailto:farhanbagask@gmail.com">farhanbagask@gmail.com</a></span>
+              </li>
+              <li>
+                <span class="cl-label">LINKEDIN</span>
+                <span class="cl-value"><a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">farhan-rizqullah-bagaskara</a></span>
+              </li>
+              <li>
+                <span class="cl-label">GITHUB</span>
+                <span class="cl-value"><a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">github.com/farhanrbagask</a></span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <form class="cform" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="from_name" placeholder="John Doe" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="from_email" placeholder="john@example.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="cf-msg">Message</label>
+                <textarea id="cf-msg" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="cfSubmit">Send Message</button>
+              <div class="form-msg" id="formMsg"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-name">Farhan Rizqullah Bagaskara</div>
+      <div class="footer-tag">Software Engineer | Data & AI Enthusiast</div>
+      <div class="footer-links">
+        <a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:farhanbagask@gmail.com">Email</a>
+      </div>
+      <div class="copyright">
+        &copy; <span id="currentYear"></span> Farhan Rizqullah Bagaskara. All rights reserved.
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- SHEET 02 — PROFIL -->
-<section class="sheet" id="about">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 02</span><span>PROFIL</span></div>
-    <div class="about-grid">
-      <figure class="id-photo">
-        <img src="https://farhanrbagask.github.io/webporto/images/fotoProfilSaya.jpeg" alt="Foto Farhan Rizqullah Bagaskara" loading="lazy">
-        <figcaption class="mono">ID — F.R.B / SOFTWARE ENGINEER</figcaption>
-      </figure>
-      <div>
-        <h2>Tentang Saya</h2>
-        <p>Fresh graduate Teknik Informatika dengan konsentrasi Software Engineering. Pengalaman membangun aplikasi web end-to-end, merancang skema basis data relasional, dan melatih model Deep Learning untuk studi berbasis data nyata. Di luar kode, pernah memimpin Himpunan Mahasiswa Informatika — pengalaman yang membentuk cara saya mengelola tim, mengoordinasikan proyek, dan berkomunikasi lintas peran.</p>
-        <div class="stat-row">
-          <div class="stat"><div class="num" data-count="3.66" data-decimals="2">0</div><div class="label mono">IPK / 4.00</div></div>
-          <div class="stat"><div class="num" data-count="6" data-decimals="0">0</div><div class="label mono">PROYEK DITAMPILKAN</div></div>
-          <div class="stat"><div class="num" data-count="2" data-decimals="0">0</div><div class="label mono">RISET DIPUBLIKASIKAN</div></div>
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lbClose" aria-label="Close modal">&times;</button>
+    <div class="lb-content">
+      <div class="lb-slideshow" id="lbSlideshow">
+        <div id="lbSlidesContainer"></div>
+        <button class="lb-slide-btn prev" id="lbPrevBtn" aria-label="Previous slide">&#8249;</button>
+        <button class="lb-slide-btn next" id="lbNextBtn" aria-label="Next slide">&#8250;</button>
+        <div class="pc-slide-dots" id="lbDotsContainer" style="bottom: 14px;"></div>
+      </div>
+      <div class="lb-body">
+        <span class="pc-category" id="lbCat"></span>
+        <h3 id="lbTitle" style="font-size: 1.5rem; margin: 0.5rem 0 1rem;"></h3>
+        <p id="lbDesc" class="text-muted" style="margin-bottom: 1.5rem; line-height: 1.6;"></p>
+        
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text);">Technologies</h4>
+          <div id="lbTech" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+        </div>
+        
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" id="lbGithub" class="btn btn-secondary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- SHEET 03 — KEAHLIAN -->
-<section class="sheet" id="skills">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 03</span><span>KEAHLIAN TEKNIS</span></div>
-    <div class="chip-row" id="chipRow"></div>
-    <h3 style="margin-bottom:16px;font-size:14px;color:var(--ink-muted);letter-spacing:.04em;" class="mono">PENDEKATAN KERJA</h3>
-    <div class="approach-grid" id="approachGrid"></div>
-  </div>
-</section>
-
-<!-- SHEET 04 — EDUKASI -->
-<section class="sheet" id="education">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 04</span><span>RIWAYAT PENDIDIKAN</span></div>
-    <div class="timeline" id="timeline"></div>
-  </div>
-</section>
-
-<!-- SHEET 05 — KARYA -->
-<section class="sheet" id="work">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 05</span><span>KARYA &amp; PROYEK</span></div>
-    <div class="filter-row" id="filterRow"></div>
-    <div class="gallery" id="gallery"></div>
-  </div>
-</section>
-
-<!-- SHEET 06 — RISET -->
-<section class="sheet" id="research">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 06</span><span>CATATAN RISET</span></div>
-    <div id="accordion"></div>
-  </div>
-</section>
-
-<!-- SHEET 07 — KONTAK -->
-<section class="sheet" id="contact">
-  <div class="wrap">
-    <div class="sheet-label mono"><span class="num">SHEET 07</span><span>TITLE BLOCK / KONTAK</span></div>
-    <div class="contact-grid">
-      <table class="tb-table">
-        <tr><td class="k">NAMA</td><td class="v">Farhan Rizqullah Bagaskara, S.Kom.</td></tr>
-        <tr><td class="k">EMAIL</td><td class="v" data-copy="farhanbagask@gmail.com">farhanbagask@gmail.com<span class="copied-flag">✓ tersalin</span></td></tr>
-        <tr><td class="k">WHATSAPP</td><td class="v" data-wa="6285648394135">+62-856-4839-4135<span class="copied-flag">✓ membuka WA</span></td></tr>
-        <tr><td class="k">LINKEDIN</td><td class="v"><a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">farhan-rizqullah-bagaskara</a></td></tr>
-        <tr><td class="k">INSTAGRAM</td><td class="v"><a href="https://www.instagram.com/farhanrbaskara" target="_blank" rel="noopener">@farhanrbaskara</a></td></tr>
-        <tr><td class="k">GITHUB</td><td class="v"><a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">github.com/farhanrbagask</a></td></tr>
-      </table>
-      <form class="cform" id="cform" novalidate>
-        <input type="text" id="cf-name" name="from_name" placeholder="Nama Anda" required autocomplete="name">
-        <input type="email" id="cf-email" name="from_email" placeholder="Email Anda" required autocomplete="email">
-        <textarea id="cf-msg" name="message" rows="4" placeholder="Pesan Anda" required></textarea>
-        <button type="submit" class="btn primary" id="cfSubmit">Kirim Pesan</button>
-        <div class="form-msg" id="formMsg"></div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>© <span id="yr"></span> FARHAN RIZQULLAH BAGASKARA — DRAWN AS SHEET 07/07</footer>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project detail">
-  <span class="lightbox-close" id="lbClose" tabindex="0">✕ TUTUP</span>
-  <div class="lightbox-inner">
-    <img id="lbImg" src="" alt="">
-    <div class="lightbox-meta">
-      <b class="lb-title mono" id="lbTitle"></b>
-      <p class="lb-desc" id="lbDesc"></p>
-      <div class="lb-tags" id="lbTags"></div>
-      <div class="lb-actions">
-        <a class="btn" id="lbGithub" href="#" target="_blank" rel="noopener">→ GitHub</a>
-        <a class="btn" id="lbDemo" href="#" target="_blank" rel="noopener">→ Live Demo</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-/* ===== EMAILJS CONFIG ================================================
-   1. emailjs.com → create account (free: 200 emails/month)
-   2. Add Service (Gmail/Outlook) → copy Service ID
-   3. Create Template with {{from_name}} {{from_email}} {{message}}
-   4. Account → API Keys → copy Public Key
-   Replace the three strings below, then the form sends real email.
-   =================================================================== */
-const EJ_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EJ_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EJ_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-if (EJ_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') emailjs.init({ publicKey: EJ_PUBLIC_KEY });
-
-/* year */
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-/* print toggle + localStorage */
-const printToggle = document.getElementById('printToggle');
-const toggleLabel = document.getElementById('toggleLabel');
-const swCyan      = document.getElementById('swCyan');
-const swDiazo     = document.getElementById('swDiazo');
-
-function applyTheme(theme) {
-  document.body.dataset.print = theme;
-  const isCyan = theme === 'cyan';
-  toggleLabel.textContent = isCyan ? 'CYANOTYPE' : 'DIAZO';
-  swCyan.classList.toggle('on',  isCyan);
-  swDiazo.classList.toggle('on', !isCyan);
-  printToggle.setAttribute('aria-pressed', String(!isCyan));
-  localStorage.setItem('frb-theme', theme);
-}
-applyTheme(localStorage.getItem('frb-theme') || 'cyan');
-printToggle.addEventListener('click', () =>
-  applyTheme(document.body.dataset.print === 'cyan' ? 'diazo' : 'cyan')
-);
-
-/* scroll progress */
-const bar = document.getElementById('progressBar');
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
-}, { passive: true });
-
-/* mobile nav */
-const navbtn    = document.getElementById('navbtn');
-const mobileNav = document.getElementById('mobileNav');
-navbtn.addEventListener('click', () => {
-  const open = mobileNav.classList.toggle('open');
-  navbtn.setAttribute('aria-expanded', String(open));
-  navbtn.textContent = open ? '✕' : '☰';
-});
-mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  navbtn.setAttribute('aria-expanded', 'false');
-  navbtn.textContent = '☰';
-}));
-
-/* active nav */
-const sections    = document.querySelectorAll('.sheet');
-const allNavLinks = document.querySelectorAll('#tbLinks a, #mobileNav a');
-const navObs = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) {
-      allNavLinks.forEach(l => l.classList.remove('active'));
-      document.querySelectorAll(`a[href="#${en.target.id}"]`).forEach(l => l.classList.add('active'));
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => navObs.observe(s));
-
-/* compass */
-const heroSect = document.getElementById('hero');
-const needle   = document.getElementById('needle');
-heroSect.addEventListener('mousemove', e => {
-  const r  = heroSect.getBoundingClientRect();
-  const cx = r.left + r.width  * 0.78;
-  const cy = r.top  + r.height * 0.5;
-  needle.style.transform = `rotate(${Math.atan2(e.clientY-cy, e.clientX-cx)*180/Math.PI+90}deg)`;
-}, { passive: true });
-
-/* scroll reveal + chip stagger */
-let skillsRevealed = false;
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    en.target.classList.add('revealed');
-    if (en.target.id === 'skills' && !skillsRevealed) {
-      skillsRevealed = true;
-      document.querySelectorAll('.chip').forEach((c, i) => {
-        c.style.animationDelay = (i * 30) + 'ms';
-        c.classList.add('chip-in');
-      });
-    }
-    revObs.unobserve(en.target);
-  });
-}, { threshold: 0.08 });
-sections.forEach(s => { if (s.id !== 'hero') revObs.observe(s); });
-
-/* count-up */
-const countObs = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (!en.isIntersecting) return;
-    const el = en.target, target = parseFloat(el.dataset.count), dec = +el.dataset.decimals;
-    let cur = 0; const step = target / 40;
-    const tick = () => {
-      cur += step;
-      if (cur >= target) { el.textContent = target.toFixed(dec); return; }
-      el.textContent = cur.toFixed(dec);
-      requestAnimationFrame(tick);
-    };
-    tick();
-    countObs.unobserve(en.target);
-  });
-}, { threshold: 0.6 });
-document.querySelectorAll('.stat .num').forEach(el => countObs.observe(el));
-
-/* skills */
-const skills = [
-  { name:'Full Stack Web Development',   tip:'End-to-end web systems: PHP/Laravel back-end, JavaScript front-end, MySQL persistence — clean architecture, REST API design, dan MVC pattern.' },
-  { name:'Laravel & PHP',                tip:'Eloquent ORM, middleware pipeline, artisan commands, dan RESTful resource routing untuk enterprise-grade back-end.' },
-  { name:'Database Management (MySQL)',  tip:'Perancangan skema, normalisasi, query optimisation (indexing, EXPLAIN), dan manajemen integritas relasional pada sistem multi-tabel.' },
-  { name:'JavaScript',                   tip:'DOM manipulation, async/await & fetch, event-driven logic, dan modul ES6 — tanpa ketergantungan framework besar.' },
-  { name:'HTML & CSS',                   tip:'Semantic markup, layout Grid/Flexbox, responsive design, dan antarmuka aksesibel yang cross-browser.' },
-  { name:'AI / Deep Learning',           tip:'Pipeline pelatihan CNN, transfer learning (VGG/ResNet), augmentasi data, dan evaluasi model untuk klasifikasi citra (Python, TensorFlow/Keras).' },
-  { name:'UI/UX Implementation',         tip:'Menerjemahkan wireframe dan spesifikasi Figma menjadi antarmuka piksel-akurat yang navigable via keyboard dan ramah layar kecil.' },
-  { name:'Git & Version Control',        tip:'Branching strategy (feature branch), pull-request workflow, dan collaborative code review di GitHub.' },
-  { name:'Data Preparation',             tip:'Kurasi dataset, augmentasi citra, normalisasi nilai, dan manajemen label untuk training run Computer Vision.' },
-];
-const chipRow = document.getElementById('chipRow');
-skills.forEach(s => {
-  const d = document.createElement('div'); d.className = 'chip';
-  d.innerHTML = `<span class="tag">${s.name}</span><div class="tip">${s.tip}</div>`;
-  chipRow.appendChild(d);
-});
-
-const approach = [
-  { t:'Problem Solving',       d:'Menganalisis masalah dari akar, mengisolasi penyebab, dan merancang solusi bertahap — bukan sekadar memperbaiki gejala.' },
-  { t:'Software Development',  d:'Menerapkan SDLC, prinsip OOP, dan standar clean code untuk menghasilkan software yang mudah dipelihara dan dikembangkan.' },
-  { t:'Leadership & Teamwork', d:'Memimpin Himpunan Mahasiswa Informatika dan berkolaborasi lintas peran untuk menyelesaikan proyek dengan tenggat nyata.' },
-  { t:'Digital Communication', d:'Mengelola konten dan narasi digital — dari penulisan teknis hingga komunikasi publik yang jelas dan tepat sasaran.' },
-  { t:'Continuous Learning',   d:'Mengikuti perkembangan teknologi secara aktif: bacaan, kursus, dan eksperimen kode kecil sebagai kebiasaan rutin.' },
-  { t:'AI Implementation',     d:'Menerapkan Deep Learning dan Computer Vision dalam konteks nyata — bukan sekadar eksperimen laboratorium.' },
-];
-const approachGrid = document.getElementById('approachGrid');
-approach.forEach(a => {
-  const d = document.createElement('div'); d.className = 'approach-card';
-  d.innerHTML = `<h3>${a.t}</h3><p>${a.d}</p>`;
-  approachGrid.appendChild(d);
-});
-
-/* education */
-const edu = [
-  { yr:'2021 — 2025', title:'Universitas Muhammadiyah Gresik', sub:'S1 Teknik Informatika — Software Engineering · IPK 3.66',
-    img:'https://farhanrbagask.github.io/webporto/images/image.png',
-    desc:'Menyelesaikan proyek web, sistem informasi, dan Deep Learning sebagai bagian dari kurikulum dan tugas akhir. Menjabat sebagai Ketua Himpunan Mahasiswa Informatika selama dua periode, mengkoordinasikan program dan mengelola anggota aktif lintas angkatan.' },
-  { yr:'2019 — 2021', title:'SMKN 1 Lamongan', sub:'Multimedia — Informasi & Komunikasi Teknologi',
-    img:'https://farhanrbagask.github.io/webporto/images/SMKN1LMG.png',
-    desc:'Membangun fondasi teknologi digital, multimedia, dan pemecahan masalah kreatif. Titik awal yang membentuk ketertarikan pada pengembangan perangkat lunak dan desain antarmuka.' },
-];
-const tl = document.getElementById('timeline');
-edu.forEach((e, i) => {
-  const item = document.createElement('div');
-  item.className = 'tl-item' + (i === 0 ? ' open' : '');
-  item.innerHTML = `
-    <div class="tl-dot"></div>
-    <div class="tl-head"><h3>${e.title}</h3><span class="yr mono">${e.yr}</span></div>
-    <p style="margin:4px 0 0;font-size:13px;">${e.sub}</p>
-    <div class="tl-body"><div class="tl-body-in">
-      <img src="${e.img}" alt="${e.title}" loading="lazy">
-      <p style="max-width:44ch;font-size:13px;">${e.desc}</p>
-    </div></div>
-    <div class="tl-hint">${i===0?'▲ klik untuk tutup':'▼ klik untuk detail'}</div>`;
-  item.addEventListener('click', () => {
-    item.classList.toggle('open');
-    item.querySelector('.tl-hint').textContent = item.classList.contains('open') ? '▲ klik untuk tutup' : '▼ klik untuk detail';
-  });
-  tl.appendChild(item);
-});
-
-/* gallery */
-const works = [
-  { cat:'Web App', title:'Landing Page — Pusaka',
-    img:'https://farhanrbagask.github.io/webporto/images/Landing Pages Pusaka.png',
-    desc:'Halaman landing untuk platform Pusaka — dirancang dengan pendekatan konversi-first, menampilkan fitur utama produk secara ringkas.',
-    stack:['Laravel','Blade','MySQL','CSS'], repo:'#', demo:'#' },
-  { cat:'AI/ML',   title:'CNN Dashboard',
-    img:'https://farhanrbagask.github.io/webporto/images/cnn_dashboard.jpg',
-    desc:'Dashboard visualisasi training dan evaluasi model CNN — menampilkan akurasi, confusion matrix, dan riwayat loss per epoch.',
-    stack:['Python','TensorFlow','Flask','Chart.js'], repo:'#', demo:'#' },
-  { cat:'Web App', title:'Pusaka — Main Content',
-    img:'https://farhanrbagask.github.io/webporto/images/Pusaka_mainContent.png',
-    desc:'Halaman konten utama aplikasi Pusaka dengan navigasi multi-level dan tampilan data yang terstruktur.',
-    stack:['Laravel','MySQL','JavaScript'], repo:'#', demo:'#' },
-  { cat:'AI/ML',   title:'CNN — Halaman Klasifikasi',
-    img:'https://farhanrbagask.github.io/webporto/images/cnn_mainContent.png',
-    desc:'Antarmuka input gambar dan output prediksi klasifikasi CNN — pengguna mengunggah citra, sistem menampilkan kelas beserta confidence score.',
-    stack:['Python','Keras','Flask','HTML'], repo:'#', demo:'#' },
-  { cat:'MDM',     title:'Login Page',
-    img:'https://farhanrbagask.github.io/webporto/images/Loginpages.png',
-    desc:'Halaman autentikasi dengan validasi sisi server, manajemen sesi, dan penanganan error yang informatif.',
-    stack:['PHP','MySQL','CSS'], repo:'#', demo:'#' },
-  { cat:'MDM',     title:'MDM System',
-    img:'https://farhanrbagask.github.io/webporto/images/mdm.png',
-    desc:'Sistem Master Data Management untuk pengelolaan data referensi terpusat — memastikan konsistensi antar modul sistem informasi.',
-    stack:['Laravel','MySQL','Bootstrap'], repo:'#', demo:'#' },
-];
-const gallery   = document.getElementById('gallery');
-const filterRow = document.getElementById('filterRow');
-const cats      = ['All', ...new Set(works.map(w => w.cat))];
-let activeCat   = 'All';
-
-function renderGallery() {
-  gallery.innerHTML = '';
-  works.filter(w => activeCat === 'All' || w.cat === activeCat).forEach(w => {
-    const g = document.createElement('div'); g.className = 'g-item';
-    g.innerHTML = `<img src="${w.img}" alt="${w.title}" loading="lazy">
-      <div class="g-cap"><b>${w.title}</b>${w.cat}
-        <div class="stack-mini">${w.stack.map(t=>`<span class="sm-tag">${t}</span>`).join('')}</div>
-      </div>`;
-    g.addEventListener('click', () => openLightbox(w));
-    gallery.appendChild(g);
-  });
-}
-cats.forEach(c => {
-  const b = document.createElement('button');
-  b.className = 'filter-btn' + (c==='All'?' active':'');
-  b.textContent = c;
-  b.addEventListener('click', () => {
-    activeCat = c;
-    document.querySelectorAll('.filter-btn').forEach(x => x.classList.remove('active'));
-    b.classList.add('active'); renderGallery();
-  });
-  filterRow.appendChild(b);
-});
-renderGallery();
-
-const lightbox = document.getElementById('lightbox');
-function openLightbox(w) {
-  document.getElementById('lbImg').src = w.img;
-  document.getElementById('lbImg').alt = w.title;
-  document.getElementById('lbTitle').textContent = w.title.toUpperCase();
-  document.getElementById('lbDesc').textContent  = w.desc;
-  document.getElementById('lbTags').innerHTML    = w.stack.map(t=>`<span class="lb-tag">${t}</span>`).join('');
-  const gh = document.getElementById('lbGithub'), dm = document.getElementById('lbDemo');
-  gh.href = w.repo; dm.href = w.demo;
-  gh.style.opacity = w.repo==='#' ? '.45' : '1';
-  dm.style.opacity = w.demo==='#' ? '.45' : '1';
-  lightbox.classList.add('show'); document.body.style.overflow = 'hidden';
-}
-function closeLightbox() { lightbox.classList.remove('show'); document.body.style.overflow = ''; }
-document.getElementById('lbClose').addEventListener('click', closeLightbox);
-document.getElementById('lbClose').addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') closeLightbox(); });
-lightbox.addEventListener('click', e => { if(e.target===lightbox) closeLightbox(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
-
-/* research */
-const research = [
-  { title:'Sistem Integrasi Data Pelanggaran Lalu Lintas Berbasis Web — Metode Waterfall',
-    img:'https://farhanrbagask.github.io/webporto/images/Sipalu.png',
-    desc:'Merancang dan mengimplementasikan sistem web untuk Pos Satlantas Gresik yang menyatukan data pelanggaran dari beberapa titik pemantauan secara terpusat. Proses pengembangan mengikuti metode Waterfall — dari analisis kebutuhan hingga pengujian — untuk menghasilkan sistem pelaporan yang mempercepat rekap harian dan mendukung keputusan berbasis data pada tingkat operasional.' },
-  { title:'Klasifikasi Warna Dokumen via CMYK dan K-Means Clustering',
-    img:'https://farhanrbagask.github.io/webporto/images/k-means.png',
-    desc:'Membangun pipeline klasifikasi otomatis yang mengekstrak nilai warna dokumen ke ruang warna CMYK, lalu mengelompokkannya menggunakan K-Means Clustering. Tujuannya menggantikan inspeksi warna manual di alur kerja percetakan — mengurangi waktu pemeriksaan per dokumen dan meminimalkan kesalahan human judgement dalam menentukan mode cetak yang tepat.' },
-];
-const acc = document.getElementById('accordion');
-research.forEach(r => {
-  const item = document.createElement('div'); item.className = 'accordion-item';
-  item.innerHTML = `<div class="acc-head"><h3>${r.title}</h3><span class="plus mono">+</span></div>
-    <div class="acc-body"><div class="acc-body-in">
-      <img src="${r.img}" alt="${r.title}" loading="lazy"><p>${r.desc}</p>
-    </div></div>`;
-  item.querySelector('.acc-head').addEventListener('click', () => item.classList.toggle('open'));
-  acc.appendChild(item);
-});
-
-/* contact copy / WA */
-document.querySelectorAll('[data-copy]').forEach(el => {
-  el.addEventListener('click', () => {
-    navigator.clipboard.writeText(el.dataset.copy).catch(()=>{});
-    const f = el.querySelector('.copied-flag'); f.classList.add('show');
-    setTimeout(() => f.classList.remove('show'), 1600);
-  });
-});
-document.querySelectorAll('[data-wa]').forEach(el => {
-  el.addEventListener('click', () => {
-    const f = el.querySelector('.copied-flag'); f.classList.add('show');
-    setTimeout(() => f.classList.remove('show'), 1600);
-    setTimeout(() => window.open('https://wa.me/'+el.dataset.wa,'_blank'), 200);
-  });
-});
-
-/* contact form (EmailJS) */
-const cform    = document.getElementById('cform');
-const formMsg  = document.getElementById('formMsg');
-const cfSubmit = document.getElementById('cfSubmit');
-cform.addEventListener('submit', async e => {
-  e.preventDefault();
-  const name  = document.getElementById('cf-name').value.trim();
-  const email = document.getElementById('cf-email').value.trim();
-  const msg   = document.getElementById('cf-msg').value.trim();
-  if (!name || !email || !msg) return;
-  cfSubmit.disabled = true; cfSubmit.textContent = 'Mengirim…';
-  formMsg.textContent = ''; formMsg.className = 'form-msg';
-
-  if (EJ_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-    setTimeout(() => {
-      formMsg.textContent = '✓ Form siap. Tambahkan kredensial EmailJS agar pesan benar-benar terkirim.';
-      formMsg.className = 'form-msg ok';
-      cfSubmit.disabled = false; cfSubmit.textContent = 'Kirim Pesan'; cform.reset();
-    }, 800); return;
-  }
-  try {
-    await emailjs.send(EJ_SERVICE_ID, EJ_TEMPLATE_ID, { from_name:name, from_email:email, message:msg });
-    formMsg.textContent = '✓ Pesan terkirim — terima kasih, akan segera dibalas!';
-    formMsg.className = 'form-msg ok'; cform.reset();
-  } catch {
-    formMsg.textContent = '✗ Pengiriman gagal — coba lagi atau hubungi via WhatsApp.';
-    formMsg.className = 'form-msg err';
-  } finally { cfSubmit.disabled = false; cfSubmit.textContent = 'Kirim Pesan'; }
-});
-
-/* CV placeholder */
-document.getElementById('downloadCv').addEventListener('click', e => {
-  e.preventDefault();
-  alert('Tambahkan file CV.pdf ke folder proyek lalu ubah href tombol ini agar mengunduh file tersebut.');
-});
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
