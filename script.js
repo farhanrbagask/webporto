@@ -114,7 +114,8 @@ const technicalSkillCategories = [
   {
     key: 'eng', title: 'Frontend & Backend', accent: '#5B8CFF',
     skills: [
-      { name: 'PHP & Laravel', core: true, used: 'Sistem Pusaka' },
+      { name: 'Laravel', core: true, used: 'Sistem Pusaka' },
+      { name: 'PHP', core: true, used: 'Sistem Pusaka' },
       { name: 'JavaScript', core: true, used: 'Semua proyek web' },
       { name: 'HTML & CSS', core: true },
       { name: 'MySQL', core: true, used: 'Sipalu, MDM' },
@@ -128,21 +129,21 @@ const technicalSkillCategories = [
       { name: 'Pandas & NumPy', core: true },
       { name: 'Matplotlib', core: true },
       { name: 'Power BI', core: true },
-      { name: 'Data Cleaning', core: true, used: 'Riset K-Means' }
+      { name: 'Excel', core: true, used: 'Riset K-Means' }
     ]
   },
   {
-    key: 'ai', title: 'AI & Machine Learning', accent: '#C77DFF',
+    key: 'ai', title: 'Machine Learning & AI Exploration', accent: '#C77DFF',
     skills: [
-      { name: 'TensorFlow & Keras', core: true, used: 'CNN Dashboard' },
+      { name: 'Python', core: true, used: 'CNN Dashboard' },
       { name: 'Deep Learning (CNN)', core: true, used: 'CNN Dashboard' },
-      { name: 'Computer Vision', core: true },
-      { name: 'Xception Architecture', core: true },
+      { name: 'openCV', core: true },
+      { name: 'TensorFlow & Keras', core: true },
       { name: 'Scikit-learn', core: true }
     ]
   },
   {
-    key: 'tools', title: 'Tool & Version Control', accent: '#FFB454',
+    key: 'tools', title: 'Tools & Version Control', accent: '#FFB454',
     skills: [
       { name: 'Git & GitHub', core: true, used: 'Semua proyek' },
       { name: 'VS Code', core: true },
@@ -200,58 +201,86 @@ if (downloadCvBtn) {
 const projectsData = [
   {
     id: 0,
-    cat: 'AI / Machine Learning',
-    title: 'AI Generated Image Detection using CNN Xception',
-    desc: 'A deep learning research project aimed at distinguishing between real and AI-generated images. Utilizing the Xception Convolutional Neural Network architecture, the model was trained and evaluated on the CIFAKE dataset to achieve high accuracy in image classification.',
-    tech: ['Python', 'TensorFlow', 'Keras', 'CNN', 'Xception', 'Computer Vision'],
+    cat: 'Research & Publications',
+    title: 'Perancangan Sistem Integrasi Data Pelanggaran Lalu Lintas Berbasis Web Dengan Metode Waterfall Di Pos Satlantas Pada Kawasan Tertib Lalu Lintas Polres Gresik',
+    desc: 'JATI (Jurnal Mahasiswa Teknik Informatika).',
+    tech: ['Jurnal Ilmiah', 'Sistem Informasi', 'Waterfall'],
     slides: [
-      { img: 'images/cnn_mainContent.png', caption: 'Research overview and model architecture' }
+      { img: 'images/sipalu.png', caption: 'Research overview and model architecture' }
     ],
-    github: '#'
+    github: 'https://garuda.kemdiktisaintek.go.id/documents/detail/4704357'
   },
   {
     id: 1,
     cat: 'Web Application',
-    title: 'Traffic Violation Data Integration System',
-    desc: 'A web-based system for Gresik Traffic Police to centralize violation data from multiple monitoring points. Developed using the Waterfall method to streamline daily recaps and support data-driven operational decisions.',
-    tech: ['Laravel', 'MySQL', 'PHP', 'HTML/CSS'],
+    title: 'Pusaka - Pusat Alat Tulis Kantor HIMATIF',
+    desc: 'Website ini merupakan media informasi badan usaha HIMATIF yang menyediakan layanan alat tulis kantor (ATK), printing, fotokopi, percetakan, dan kebutuhan administrasi lainnya. Website ini hadir untuk memudahkan mahasiswa dan masyarakat memperoleh layanan secara cepat, praktis, dan efisien.',
+    tech: ['PHP Native', 'MySQL', 'JavaScript', 'HTML/CSS'],
     slides: [
-      { img: 'images/Sipalu.png', caption: 'Main dashboard — Data integration overview' },
-      { img: 'images/Loginpages.png', caption: 'Login page — Secure officer authentication' }
+      { img: 'images/web-pusaka/landing-Pages.png', caption: 'Main dashboard — Data integration overview' },
+      { img: 'images/web-pusaka/kalkulator-1.png', caption: 'Login page — Secure officer authentication' },
+      { img: 'images/web-pusaka/kalkulator-2.png', caption: 'Violation calculator — Automated fine calculation' },
+      { img: 'images/web-pusaka/aktivitas.png', caption: 'Violation calculator — Automated fine calculation' },
+      { img: 'images/web-pusaka/admin-pages.png', caption: 'Violation calculator — Automated fine calculation' },
+      { img: 'images/web-pusaka/artikel-berita.png', caption: 'Violation calculator — Automated fine calculation' }
     ],
-    github: '#'
+    github: 'https://github.com/farhanrbagask/web-pusaka.git'
   },
   {
     id: 2,
-    cat: 'Data Analytics / AI',
-    title: 'Document Color Classification via CMYK & K-Means',
-    desc: 'An automated classification pipeline that extracts document color values into the CMYK space and groups them using K-Means Clustering to replace manual printing inspections.',
-    tech: ['Python', 'K-Means', 'Scikit-learn', 'Pandas'],
+    cat: 'Deep Learning CNN Xception - Web Application',
+    title: 'DCNN Xception for AI Generated Image Detection',
+    desc: 'Project ini merupakan implementasi Deep Learning berbasis Convolutional Neural Network (CNN) untuk mendeteksi apakah sebuah gambar merupakan gambar asli atau gambar yang dihasilkan oleh Artificial Intelligence.',
+    tech: ['Laravel', 'Python', 'NumPy', 'Scikit-learn', 'Pandas'],
     slides: [
-      { img: 'images/k-means.png', caption: 'K-Means clustering result on CMYK color space' }
+      { img: 'images/cnn-xception-detection/hasil-pages.png', caption: 'Master Data Management — reference data overview' },
+      { img: 'images/cnn-xception-detection/dashboard-pages.png', caption: 'Master Data Management — reference data overview' },
+      { img: 'images/cnn-xception-detection/upload-dataset-pages.png', caption: 'Master Data Management — reference data overview' },
+      { img: 'images/cnn-xception-detection/detection-pages.png', caption: 'Master Data Management — reference data overview' }
     ],
-    github: '#'
+    github: 'https://github.com/farhanrbagask/cnn-xception-detection-image-generated-by-ai.git'
   },
   {
     id: 3,
-    cat: 'Web Application',
-    title: 'Master Data Management (MDM) System',
-    desc: 'A centralized reference data management system designed to ensure data consistency across various information system modules within an organization.',
-    tech: ['Laravel', 'MySQL', 'Bootstrap'],
+    cat: 'Forecasting - Web Application',
+    title: 'Peramalan Penjualan Menggunakan Metode Weighted Moving Averages',
+    desc: 'Aplikasi web untuk memprediksi penjualan menggunakan metode Weighted Moving Average (WMA). Project ini dibangun dengan Laravel dan dilengkapi fitur pengelolaan data penjualan, perhitungan prediksi, evaluasi akurasi menggunakan MAPE (Mean Absolute Percentage Error), serta export hasil ke Excel.',
+    tech: ['Laravel', 'MySQL', 'Php', 'Excel', 'JavaScript'],
     slides: [
-      { img: 'images/mdm.png', caption: 'Master Data Management — reference data overview' }
+      { img: 'images/weighted-moving-averages/dashboard-pages.png', caption: 'Forecasting — sales prediction' },
+      { img: 'images/weighted-moving-averages/login-pages.png', caption: 'Forecasting — sales prediction' },
+      { img: 'images/weighted-moving-averages/upload-data-penjualan.png', caption: 'Forecasting — sales prediction' },
+      { img: 'images/weighted-moving-averages/proses-prediksi-pages.png', caption: 'Forecasting — sales prediction' },
+      { img: 'images/weighted-moving-averages/stok-pages.png', caption: 'Forecasting — sales prediction' }
     ],
-    github: '#'
+    github: 'https://github.com/farhanrbagask/weighted-moving-average-forecasting.git'
   },
   {
     id: 4,
-    cat: 'Front-End Development',
-    title: 'Pusaka Landing & Main Platform',
-    desc: 'Developed a conversion-focused landing page and main content interface with multi-level navigation and structured data display for the Pusaka platform.',
-    tech: ['Laravel', 'JavaScript', 'CSS'],
+    cat: 'Data Mining - Naive Bayes - Web Application',
+    title: 'Prediksi Kerusakan Laptop',
+    desc: 'Aplikasi web untuk melakukan prediksi kerusakan laptop menggunakan algoritma Naive Bayes berdasarkan data gejala atau kondisi perangkat. Aplikasi ini dibangun menggunakan Laravel sebagai framework pengembangan web dan MySQL sebagai database. Sistem menyediakan pengelolaan data latih, data uji, proses perhitungan Naive Bayes, hasil prediksi, serta detail perhitungan probabilitas yang digunakan dalam menentukan jenis kerusakan laptop.',
+    tech: ['Laravel', 'JavaScript', 'MySQL'],
     slides: [
-      { img: 'images/Pusaka_mainContent.png', caption: 'Main platform — structured data display & navigation' },
-      { img: 'images/Landing Pages Pusaka.png', caption: 'Landing page — conversion-focused design' }
+      { img: 'images/prediksi-kerusakan-laptop/login-pages.png', caption: 'Main platform — structured data display & navigation' },
+      { img: 'images/prediksi-kerusakan-laptop/dashboard.png', caption: 'Landing page — conversion-focused design' },
+      { img: 'images/prediksi-kerusakan-laptop/data-latih.png', caption: 'Main platform — structured data display & navigation' },
+      { img: 'images/prediksi-kerusakan-laptop/data-uji.png', caption: 'Main platform — structured data display & navigation' },
+      { img: 'images/prediksi-kerusakan-laptop/prediksi.png', caption: 'Main platform — structured data display & navigation' }
+
+    ],
+    github: 'https://github.com/farhanrbagask/prediksi-kerusakan-laptop.git'
+  },
+  {
+    id: 5,
+    cat: 'Mobile Device Management - Web Application',
+    title: 'Mobile Device Management System',
+    desc: 'Mengelola perangkat Android perusahaan melalui sistem Mobile Device Management (MDM), mencakup proses provisioning dan konfigurasi perangkat secara terpusat, penerapan kebijakan keamanan, pengelolaan aplikasi dan akses pengguna, serta monitoring status perangkat untuk memastikan keamanan, kepatuhan, dan kelancaran operasional.',
+    tech: ['Airdroid'],
+    slides: [
+      { img: 'images/mdm/mdm1.png', caption: 'Main platform — structured data display & navigation' },
+      { img: 'images/mdm/mdm2.png', caption: 'Landing page — conversion-focused design' },
+      { img: 'images/mdm/mdm3.png', caption: 'Landing page — conversion-focused design' }
     ],
     github: '#'
   }
