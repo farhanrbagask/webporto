@@ -1,374 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farhan Rizqullah Bagaskara | Software Engineer</title>
+  <meta name="description" content="Portfolio of Farhan Rizqullah Bagaskara, an Informatics Engineering graduate focused on software engineering, data analytics, and AI-driven solutions.">
+  
+  <meta property="og:title" content="Farhan Rizqullah Bagaskara | Software Engineer">
+  <meta property="og:description" content="Portfolio of Farhan Rizqullah Bagaskara, focused on software engineering, data analytics, and AI-driven solutions.">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="images/Logo-FRB.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <title>Farhan Rizqullah Bagaskara</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Farhan Rizqullah Bagaskara",
+    "jobTitle": "Software Engineer",
+    "url": "https://farhanrbagask.github.io/webporto/",
+    "sameAs": [
+      "https://www.linkedin.com/in/farhan-rizqullah-bagaskara",
+      "https://github.com/farhanrbagask"
+    ]
+  }
+  </script>
 
-    <link rel="stylesheet" href="style.css">
-    <!--<Remix Icon>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-    <!--<Swiper Slider>-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
 </head>
-
 <body>
-    <!--<HERO HEADER & NAV>-->
-    <header id="home">
-        <nav>
-            <div class="logo">
-                <a href="#">Farhan's Portfolio</a>
-            </div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#portofolio">Porto</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="social-icon">
-                <a href="https://www.instagram.com/farhanrbaskara" target="_blank"><i class="ri-instagram-fill"></i></a>
-                <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank"><i class="ri-linkedin-fill"></i></a>
-                <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank"><i class="ri-github-fill"></i></a>
-            </div>
-            <div class="bars">
-                <i class="ri-menu-2-line"></i>
-            </div>
-        </nav>
-        <div class="hero_content">
-            <h2>Software Engineer</h2>
-            <h1><span></span>Farhan Rizqullah Bagaskara S.KOM.<br>i'm <span id="text"></span></h1>
-            <p>Building scalable web applications and transforming data into actionable insights.</p>
-            <button onclick="window.location.href='#about'">About Me</button>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">Farhan Portfolio.</a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+      <button class="btn btn-secondary" id="mobileThemeToggle" style="width: 100%; margin-top: 10px;">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Building Software.<br>Analyzing Data.<br>Solving Real Problems.</h1>
+          <p class="hero-lead">Hi, I'm Farhan Rizqullah Bagaskara, an Informatics Engineering graduate focused on software engineering, data analytics, and AI-driven solutions.</p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#" id="downloadCv" class="btn btn-secondary">Download CV</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:farhanbagask@gmail.com">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email
+            </a>
+          </div>
         </div>
-    </header>
-    <!--<ABOUT>-->
-    <section class="about" id="about">
-        <div class="about_top">
-            <div class="about_img">
-                <img src="images/fotoProfilSaya.jpeg" alt="Farhan Rizqullah Bagaskara">
-            </div>
-            <div class="about_content">
-                <h1>About Me!</h1>
-                <p>I am a fresh graduate in Informatics Engineering with a concentration in Software Engineering, 
-                    passionate about building scalable web applications and solving real-world problems through technology. 
-                    Experienced in developing web applications, information systems, and Deep Learning projects, 
-                    with strong skills in Full Stack Web Development, database management, and software development. 
-                    Beyond technical expertise, I have developed leadership, public communication, 
-                    and digital media management skills through organizational and professional experiences, 
-                    enabling me to collaborate effectively and deliver meaningful digital solutions.</p>
-                <button class="skill_btn">Show My Skills</button>
-            </div>
+        <div class="hero-image">
+          <img src="images/fotoProfilSaya.jpeg" alt="Farhan Rizqullah Bagaskara">
         </div>
-        <div class="about_bottom">
-            <div class="skill_box">
-                <h2>Full Stack Web Development</h2>
-                <div class="percent"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I am a fresh graduate in Informatics Engineering from Universitas Muhammadiyah Gresik with a concentration in Software Engineering.</p>
+            <p>I have experience building end-to-end web applications, designing relational database schemas, and training Deep Learning models for data-driven research. I enjoy the process of turning complex problems into scalable software solutions.</p>
+            <p>Outside of writing code, I have served as the President of the Informatics Student Association. This experience shaped my ability to manage teams, coordinate projects, and communicate effectively across different roles.</p>
+          </div>
+          <div class="quick-stats">
+            <div class="stat-item">
+              <div class="stat-num" data-target="3.66">0.00</div>
+              <div class="stat-label">GPA (Out of 4.00)</div>
             </div>
-            <div class="skill_box">
-                <h2>Laravel & PHP</h2>
-                <div class="percent"></div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="3">0</div>
+              <div class="stat-label">Areas of Expertise</div>
             </div>
-            <div class="skill_box">
-                <h2>Database Management (MySQL)</h2>
-                <div class="percent"></div>
+            <div class="stat-item">
+              <div class="stat-num" data-target="5">0</div>
+              <div class="stat-label">Technical Projects</div>
             </div>
-            <div class="skill_box">
-                <h2>JavaScript</h2>
-                <div class="percent"></div>
+            <div class="stat-item">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Continuous Learner</div>
             </div>
-            <div class="skill_box">
-                <h2>HTML & CSS</h2>
-                <div class="percent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <div class="container">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/LOGOOOO.jpeg" alt="Satlantas Polres Gresik"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Staff Unit Kamsel</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">Satlantas Polres Gresik</div>
+              </div>
             </div>
-            <div class="skill_box">
-                <h2>Artificial Intelligence / Deep Learning</h2>
-                <div class="percent"></div>
+            <span class="timeline-date">2024 — Now.</span>
+            <p class="timeline-desc">Managed Android Enterprise MDM for centralized device provisioning, application management, security policies, user access, and device compliance across 16 Polsek. Supported digital communication and social media operations through content planning, copywriting, visual production, and daily performance reporting.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/SISILOGO.jpg" alt="PT. Sinergi Informatika Semen Indonesia"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Commercial Account Intern</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">PT. Sinergi Informatika Semen Indonesia </div>
+              </div>
             </div>
-            <div class="skill_box">
-                <h2>UI/UX Implementation</h2>
-                <div class="percent"></div>
+            <span class="timeline-date">Jan 2020 — March 2020.</span>
+            <p class="timeline-desc">Supported commercial and digital marketing activities through social media management, web content creation, and promotional materials. Gained practical exposure to business processes, customer communication, and enterprise technology solutions, including basic SAP ERP concepts.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <div class="timeline-logo-placeholder"><img src="images/SIGLOGO.png" alt="Semen Indonesia Group"></div>
+              <div>
+                <h3 class="timeline-role" style="margin-bottom: 0;">Unit Of ICT Services Intern</h3>
+                <div class="timeline-org" style="margin-bottom: 0;">PT Semen Indonesia (Persero) Tbk.</div>
+              </div>
             </div>
-            <div class="skill_box">
-                <h2>Git & Version Control</h2>
-                <div class="percent"></div>
-            </div>
-            <div class="skill_box">
-                <h2>Data Preparation</h2>
-                <div class="percent"></div>
-            </div>
+            <span class="timeline-date">Okt 2019 — Des 2019.</span>
+            <p class="timeline-desc">Provided IT support for end users, including hardware and software troubleshooting, printer support, and basic network monitoring. Assisted the ICT Services team in maintaining IT operations and resolving day-to-day technical issues across the Main Office.</p>
+          </div>
         </div>
     </section>
-    <!--SKILLS-->
-    <section class="services" id="skills">
-        <div class="heading">
-            <h1>Hard-Soft Skills</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut placeat alias esse nihil quam maxime ipsa
-                perspiciatis</p>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div id="technicalSkillsList"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="container">
+
+        <!-- ① Featured Projects -->
+        <h2>Featured Projects</h2>
+        <div class="projects-grid" style="margin-bottom: 6rem;">
+
+          <!-- Project 1 -->
+          <div class="project-card lb-trigger" data-id="1" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-1">
+              <div class="pc-slide active">
+                <img src="images/web-pusaka/landing-Pages.png" alt="Traffic System - Main View">
+                <div class="pc-slide-caption">Main dashboard </div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/web-pusaka/landing-Pages.png" alt="Traffic System - Login">
+                <div class="pc-slide-caption"></div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Main Platform - Web Application</span>
+              <h3>Pusaka - Pusat Alat Tulis Kantor HIMATIF</h3>
+              <p class="pc-desc">Website ini merupakan media informasi badan usaha HIMATIF yang menyediakan layanan alat tulis kantor (ATK), printing, fotokopi, percetakan, dan kebutuhan administrasi lainnya. Website ini hadir untuk memudahkan mahasiswa dan masyarakat memperoleh layanan secara cepat, praktis, dan efisien.</p>
+              <span class="pc-tech">PHP Native &bull; MySQL &bull; Javascript &bull; HTML/CSS</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card lb-trigger" data-id="2" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-2">
+              <div class="pc-slide active">
+                <img src="images/cnn-xception-detection/dashboard-pages.png" alt="K-Means Clustering">
+                <div class="pc-slide-caption">Machine Learning - Deep Learning</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Deep Learning CNN Xception - Web Application</span>
+              <h3>CNN Xception for AI Generated Image Detection
+              </h3>
+              <p class="pc-desc">Project ini merupakan implementasi Deep Learning berbasis Convolutional Neural Network (CNN) untuk mendeteksi apakah sebuah gambar merupakan gambar asli atau gambar yang dihasilkan oleh Artificial Intelligence.</p>
+              <span class="pc-tech">Laravel &bull; PHP &bull; Python &bull; CNN (Xception) &bull; Numpy &bull; Scikit-learn Pandas &bull;</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card lb-trigger" data-id="3" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-3">
+              <div class="pc-slide active">
+                <img src="images/weighted-moving-averages/login-pages.png" alt="MDM System">
+                <div class="pc-slide-caption">Forecasting - Web Application</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Forecasting - Web Application</span>
+              <h3>Sistem Forecasting Penjualan Kopi -  Kedai Kopi</h3>
+              <p class="pc-desc">Aplikasi web untuk memprediksi penjualan menggunakan metode Weighted Moving Average (WMA).
+                                Project ini dibangun dengan Laravel dan dilengkapi fitur pengelolaan data penjualan, perhitungan prediksi, evaluasi akurasi menggunakan MAPE (Mean Absolute Percentage Error), serta export hasil ke Excel.</p>
+              <span class="pc-tech">Laravel &bull; MySQL &bull; PHP</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card lb-trigger" data-id="4" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-4">
+              <div class="pc-slide active">
+                <img src="images/prediksi-kerusakan-laptop/login-pages.png" alt="Pusaka Main Content">
+                <div class="pc-slide-caption">Data Mining - Web Application</div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/weighted-moving-averages/landing-pages.png" alt="Pusaka Landing Page">
+                <div class="pc-slide-caption">Data Mining - Web Application</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">Data Mining - Web Application</span>
+              <h3>Prediksi Kerusakan Laptop - Naive Bayes</h3>
+              <p class="pc-desc">Aplikasi web untuk melakukan prediksi kerusakan laptop menggunakan algoritma Naive Bayes berdasarkan data gejala atau kondisi perangkat. 
+                Aplikasi ini dibangun menggunakan Laravel sebagai framework pengembangan web dan MySQL sebagai database. Sistem menyediakan pengelolaan data latih, data uji, proses perhitungan Naive Bayes, hasil prediksi, serta detail perhitungan probabilitas yang digunakan dalam menentukan jenis kerusakan laptop.</p>
+              <span class="pc-tech">Laravel &bull; JavaScript &bull; MySQL</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card lb-trigger" data-id="5" style="cursor: pointer;">
+            <div class="pc-slideshow" id="slideshow-5">
+              <div class="pc-slide active">
+                <img src="images/mdm/mdm2.png" alt="Pusaka Main Content">
+                <div class="pc-slide-caption">Main platform — structured data display &amp; navigation</div>
+              </div>
+              <div class="pc-slide">
+                <img src="images/mdm/mdm1.png" alt="Pusaka Landing Page">
+                <div class="pc-slide-caption">Mobile Device Management System</div>
+              </div>
+              <!-- <button class="pc-slide-btn prev" aria-label="Previous slide">&#8249;</button>
+              <button class="pc-slide-btn next" aria-label="Next slide">&#8250;</button> -->
+              <div class="pc-slide-dots"></div>
+            </div>
+            <div class="pc-content">
+              <span class="pc-category">SaaS (Software as a Service)</span>
+              <h3>Mobile Device Management System</h3>
+              <p class="pc-desc">Conversion-focused landing page and main content interface with multi-level navigation and structured data display.</p>
+              <span class="pc-tech">Airdroid</span>
+              <div class="pc-view-btn">
+                <span>View Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="services_card">
-            <!--CARD 1-->
-            <div class="service_card">
-                <i class="ri-macbook-line"></i>
-                <div class="services_card_det">
-                    <h2>Full Stack Web Development</h2>
-                    <p>Develop responsive and scalable web applications using PHP, Laravel, JavaScript, HTML, CSS, and MySQL while following clean code and software engineering principles.</p>
-                </div>
+
+        <!-- ② Research & Publications -->
+        <h2>Research &amp; Publications</h2>
+        <div class="featured-project">
+          <div class="fp-image">
+            <img src="images/Sipalu.png" alt="AI Generated Image Detection">
+          </div>
+          <div class="fp-content">
+            <h3>Perancangan Sistem Integrasi Data Pelanggaran Lalu Lintas Berbasis Web Dengan Metode Waterfall Di Pos Satlantas Pada Kawasan Tertib Lalu Lintas Polres Gresik
+
+</h3>
+            <p class="fp-desc">JATI (Jurnal Mahasiswa Teknik Informatika).</p>
+            <div class="fp-tech">
+              <span>Jurnal Ilmiah</span>
+              <span>Sistem Informasi</span>
+              <span>Waterfall</span>
             </div>
-            <!--CARD 2-->
-            <div class="service_card">
-                <i class="ri-send-plane-line"></i>
-                <div class="services_card_det">
-                    <h2>Artificial Intelligence</h2>
-                    <p>Implement Deep Learning and Computer Vision models for image classification and AI-based solutions, with a focus on practical and research-driven applications.
-                    </p>
-                </div>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <button class="btn btn-secondary lb-trigger" data-id="0">View Details</button>
+              <a href="https://garuda.kemdiktisaintek.go.id/documents/detail/4704357" class="btn btn-primary" target="_blank" rel="noopener" id="pubLink0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                View Publication
+              </a>
             </div>
-            <!--CARD 3-->
-            <div class="service_card">
-                <i class="ri-line-chart-line"></i>
-                <div class="services_card_det">
-                    <h2>Database Management</h2>
-                    <p>Design, optimize, and manage relational databases to ensure data integrity, performance, and efficient information retrieval.</p>
-                </div>
-            </div>
-            <!--CARD 4-->
-            <div class="service_card">
-                <i class="ri-shape-line"></i>
-                <div class="services_card_det">
-                    <h2>UI/UX IMPLEMENTATION</h2>
-                    <p>Create user-friendly interfaces with responsive layouts and intuitive user experiences that improve accessibility and usability.</p>
-                </div>
-            </div>
-            <!--CARD 5-->
-            <div class="service_card">
-                <i class="ri-hard-drive-3-line"></i>
-                <div class="services_card_det">
-                    <h2>Develop Software</h2>
-                    <p>Apply software development life cycle (SDLC), object-oriented programming concepts, and best practices to develop maintainable and reliable software.</p>
-                </div>
-            </div>
-            <!--CARD 6-->
-            <div class="service_card">
-                <i class="ri-chat-3-line"></i>
-                <div class="services_card_det">
-                    <h2>Digital Communication</h2>
-                    <p>Skilled in managing digital content, public communication, and social media strategies while delivering clear and engaging information.</p>
-                </div>
-            </div>
-            <!--CARD 2-->
-            <div class="service_card">
-                <i class="ri-send-plane-line"></i>
-                <div class="services_card_det">
-                    <h2>Problem Solving</h2>
-                    <p>Analyze complex problems, identify root causes, and develop effective software solutions through logical thinking and systematic approaches.
-                    </p>
-                </div>
-            </div>
-            <!--CARD 2-->
-            <div class="service_card">
-                <i class="ri-send-plane-line"></i>
-                <div class="services_card_det">
-                    <h2>Leadership & Teamwwork</h2>
-                    <p>Experienced in leading student organizations and collaborating with multidisciplinary teams to achieve shared goals through effective communication.
-                    </p>
-                </div>
-            </div>
-            <!--CARD 2-->
-            <div class="service_card">
-                <i class="ri-send-plane-line"></i>
-                <div class="services_card_det">
-                    <h2>Continous Learning</h2>
-                    <p>Passionate about learning emerging technologies, exploring innovative solutions, and continuously improving technical and professional competencies.
-                    </p>
-                </div>
-            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & ORGANIZATION (Merged) -->
+    <section id="education" class="reveal">
+      <div class="container">
+        <!-- Education Sub-section -->
+        <div class="edu-section-header">
+          <h2>Education &amp; Organization</h2>
         </div>
         
-    </section>
-    <!--MINI CONTACT ME SECTION-->
-    <section class="contactMe">
-        <h1>Available for Remote Work</h1>
-        <button onclick="window.location.href='#contact'">Contact Me</button>
-    </section>
-    <!--TESTIMONIALS SECTION-->
-    <section class="testimonials" id="education">
-        <div class="heading">
-            <h1>Education</h1>
-            <p>My academic background reflects my commitment to continuous learning and professional growth. Throughout my studies, I gained practical experience in software development, information systems, and problem solving while actively participating in leadership and organizational activities.</p>
+        <div class="edu-tabs">
+          <button class="edu-tab-btn active" data-tab="education">Education</button>
+          <button class="edu-tab-btn" data-tab="organization">Organization</button>
         </div>
-        <div class="swiper testSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <!--Slide 1-->
-                    <div class="test_slide">
-                        <div class="client_img">
-                            <img src="images/image.png" alt="">
-                        </div>
-                        <p>During my studies at Universitas Muhammadiyah Gresik, I specialized in
-        Software Engineering and completed various projects in web development,
-        information systems, and Deep Learning. I also served as Chairman of the
-        Informatics Student Association, strengthening my leadership and teamwork
-        skills.</p>     
-                        <h2> GPA: 3.66<br>Bachelor of Informatics Engineering GPA: 3.66</h2>
-                        <h3>UNIVERSITAS MUHHAMADIYAH GRESIK</h3>
-                    </div>
+
+        <!-- Education Tab -->
+        <div class="edu-tab-content active" id="tab-education">
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-logo">
+                <img src="images/image.png" alt="Universitas Muhammadiyah Gresik Logo">
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2021 — 2025</span>
+                <h3 class="edu-role">Bachelor of Informatics Engineering</h3>
+                <div class="edu-org">Universitas Muhammadiyah Gresik</div>
+                <p class="edu-desc"><strong>Concentration:</strong> Software Engineering<br><strong>GPA:</strong> 3.66 / 4.00<br><br>Mata Kuliah Relevan : Rekayasa Perangkat Lunak, Analisis dan Perancangan Sistem, Rekayasa Kebutuhan, Pemrograman Web, Pemrograman Berorientasi Objek, Pemrograman Terstruktur, Basis Data, Basis Data Lanjut, Manajemen Kualitas Perangkat Lunak.</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-logo">
+                <img src="images/SMKN1LMG.png" alt="SMKN 1 Lamongan Logo">
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2019 — 2021</span>
+                <h3 class="edu-role">Multimedia (Information &amp; Communication Technology)</h3>
+                <div class="edu-org">SMKN 1 Lamongan</div>
+                <p class="edu-desc">Built a foundation in digital technology, multimedia, and creative problem-solving, which sparked an interest in software engineering and interface design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organization Tab -->
+        <div class="edu-tab-content" id="tab-organization">
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-logo">
+                <div class="timeline-logo-placeholder"><img src="images/Logo-Himatif.png" alt="Himatif UMG"></div>
+              </div>
+              <div class="edu-content">
+                <span class="edu-date">2021 — 2024</span>
+                <h3 class="edu-role">Ketua Umum Himpunan Mahasiswa Teknik Informatika UMG</h3>
+                <div class="edu-org">Universitas Muhammadiyah Gresik</div>
+                <p class="edu-desc">Led the Informatics Student Association (HIMATIF) in planning, coordinating, and evaluating organizational initiatives aimed at supporting student development in both academic and non-academic areas. Responsible for managing organizational operations, aligning team objectives, and fostering collaboration across divisions to ensure the effective execution of programs and activities.
+                  During my tenure, I oversaw the implementation of 35 organizational programs, initiated the East Java Information Technology Week focused on Artificial Intelligence (AI), and led community engagement initiatives to promote digital literacy and technology awareness among high school students. These experiences strengthened my leadership, strategic planning, project management, communication, analytical thinking, and problem-solving capabilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONORS / PENGHARGAAN -->
+    <section id="honors" class="reveal">
+      <div class="container">
+        <h2>Honors &amp; Awards</h2>
+        <p class="text-muted" style="margin: -1.25rem 0 2.5rem; font-size: 0.9375rem;">Recognition received throughout academic and professional journey.</p>
+        <div class="honors-grid">
+
+          <!-- Award 1 -->
+          <div class="award-card">
+            <div class="award-photo">
+              <img src="images/Award.png" alt="Penerimaan Penghargaan 1">
+            </div>
+            <div class="award-meta">
+              <span class="award-category"></span>
+              <h3 class="award-title">DEDIKASI KEPADA POLRES GRESIK MEMBANTU PERSONIL SATLANTAS POLRES GRESIK DALAM OPERASI KETUPAT SEMERU 2026</h3>
+              <p class="award-desc">Received an appreciation award from Gresik Police for contributing to the implementation of Operation Ketupat Semeru 2026. Supported traffic management, public information dissemination, and operational activities within the Traffic Unit, while demonstrating responsibility, teamwork, and commitment to public service during the Eid holiday security operation.</p>
+              <div class="award-footer">
+                <div class="award-issuer">
+                  POLRES RESOR GRESIK
                 </div>
-                <div class="swiper-slide">
-                    <!--Slide 1-->
-                    <div class="test_slide">
-                        <div class="client_img2">
-                            <img src="images/SMKN1LMG.png" alt="">
-                        </div>
-                        <p>Studied Multimedia ICT at SMKN 1 Lamongan, where I built a strong understanding of digital technology, multimedia, and creative problem solving. This experience became the starting point of my journey into Software Engineering.</p>
-                        <h2>2019-2021</h2>
-                        <h3>SMKN 1 LAMONGAN</h3>
-                    </div>
-                </div>
+                <span class="award-year"></span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- PORTOFOLIO SECTION-->
-    <section class="portofolio" id="portofolio">
-        <div class="heading">
-            <h2>MY PORTOFOLIO</h2>
-            <h1>Preview!</h1>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Let's Build Something Useful.</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Whether you're looking for a developer, discussing a project, or simply want to connect, feel free to reach out.</p>
+            
+            <ul class="contact-list">
+              <li>
+                <span class="cl-label">EMAIL</span>
+                <span class="cl-value"><a href="mailto:farhanbagask@gmail.com">farhanbagask@gmail.com</a></span>
+              </li>
+              <li>
+                <span class="cl-label">LINKEDIN</span>
+                <span class="cl-value"><a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">farhan-rizqullah-bagaskara</a></span>
+              </li>
+              <li>
+                <span class="cl-label">GITHUB</span>
+                <span class="cl-value"><a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">github.com/farhanrbagask</a></span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <form class="cform" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="from_name" placeholder="John Doe" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="from_email" placeholder="john@example.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="cf-msg">Message</label>
+                <textarea id="cf-msg" name="message" rows="4" placeholder="How can I help you?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" id="cfSubmit">Send Message</button>
+              <div class="form-msg" id="formMsg"></div>
+            </form>
+          </div>
         </div>
-        <div class="category">
-            <button data-filter="all">All</button>
-            <button data-filter=".category-a">Dashboard</button>
-            <button data-filter=".category-b">Main Content</button>
-            <button data-filter=".category-c">MDM</button>
-        </div>
-        <div class="portofolio_images">
-            <div class="portofolio_img portofolio1 mix category-a ">
-                <img src="images/Landing Pages Pusaka.png" alt="">
-            </div>
-            <div class="portofolio_img portofolio2 mix category-a ">
-                <img src="images/cnn_dashboard.jpg" alt="">
-            </div>
-            <div class="portofolio_img portofolio3 mix category-b">
-                <img src="images/Pusaka_mainContent.png" alt="">
-            </div>
-            <div class="portofolio_img portofolio4 mix category-b">
-                <img src="images/cnn_mainContent.png" alt="">
-            </div>
-            <div class="portofolio_img portofolio5 mix category-a">
-                <img src="images/Loginpages.png" alt="">
-            </div>
-            <div class="portofolio_img portofolio6 mix category-c">
-                <img src="images/mdm.png" alt="">
-            </div>
-        </div>
+      </div>
     </section>
-    <!-- OUR BLOGS  -->
-    <section class="blogs" id="projects">
-        <div class="heading">
-            <h1>Our Blogs</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aut placeat alias esse nihil quam maxime ipsa perspiciatis</p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-name">Farhan Rizqullah Bagaskara</div>
+      <div class="footer-tag">Software Engineer | Data & AI Enthusiast</div>
+      <div class="footer-links">
+        <a href="https://github.com/farhanrbagask" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/farhan-rizqullah-bagaskara" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:farhanbagask@gmail.com">Email</a>
+      </div>
+      <div class="copyright">
+        &copy; <span id="currentYear"></span> Farhan Rizqullah Bagaskara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lb-close" id="lbClose" aria-label="Close modal">&times;</button>
+    <div class="lb-content">
+      <div class="lb-slideshow" id="lbSlideshow">
+        <div id="lbSlidesContainer"></div>
+        <button class="lb-slide-btn prev" id="lbPrevBtn" aria-label="Previous slide">&#8249;</button>
+        <button class="lb-slide-btn next" id="lbNextBtn" aria-label="Next slide">&#8250;</button>
+        <div class="pc-slide-dots" id="lbDotsContainer" style="bottom: 14px;"></div>
+      </div>
+      <div class="lb-body">
+        <span class="pc-category" id="lbCat"></span>
+        <h3 id="lbTitle" style="font-size: 1.5rem; margin: 0.5rem 0 1rem;"></h3>
+        <p id="lbDesc" class="text-muted" style="margin-bottom: 1.5rem; line-height: 1.6;"></p>
+        
+        <div style="margin-bottom: 2rem;">
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text);">Technologies</h4>
+          <div id="lbTech" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
         </div>
-        <div class="swiper blogSwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <!--slide 1-->
-                    <div class="blog_slide">
-                        <div class="blog_img">
-                            <img src="images/Sipalu.png" alt="">
-                            <div class="blog_hide_content">
-                                <p>10 Hours ago</p>
-                                <p>By : Harry Kane  </p>
-                            </div>
-                        </div>
-                        <div class="blog_content">
-                            <h2>PERANCANGAN SISTEM INTEGRASI DATA PELANGGARAN LALU LINTAS BERBASIS WEB DENGAN METODE WATERFALL DI POS SATLANTAS PADA KAWASAN TERTIB LALU LINTAS</h2>
-                            <p>This study presents the design and implementation of a web-based traffic violation data integration system for Traffic Police Monitoring Posts within the jurisdiction of Gresik Police Department. Developed using the Waterfall methodology, 
-                                the system enables real-time traffic violation data collection, centralized information management, and automated reporting to support data-driven decision-making.
-                                By integrating traffic violation records from multiple monitoring posts, the system improves reporting efficiency, enhances data accuracy, 
-                                and provides analytical insights to support traffic safety education and enforcement strategies (Kamseltibcarlantas).
-                                </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <!--slide 2-->
-                    <div class="blog_slide">
-                        <div class="blog_img">
-                            <img src="images/k-means.png" alt="">
-                            <div class="blog_hide_content">
-                                <p>10 Hours ago</p>
-                                <p>By : Harry Kane  </p>
-                            </div>
-                        </div>
-                        <div class="blog_content">
-                            <h2>KLASIFIKASI JENIS WARNA DOKUMEN BERDASARKAN RUANG WARNA CYMK MENGGUNAKAN METODE K-MEANS CLUSTERING</h2>
-                            <p>This research proposes an automated document color classification system using CMYK color space extraction and K-Means Clustering 
-                                to improve efficiency in document printing services. The study addresses the limitations of manual 
-                                page inspection by automatically identifying color composition levels within documents and categorizing them into predefined printing groups.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+        <div style="display: flex; gap: 1rem;">
+          <a href="#" id="lbGithub" class="btn btn-secondary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
         </div>
-    </section>
-    <!-- CONTACT  -->
-    <section class="contact" id="contact">
-        <div class="heading">
-            <h1>Contact Us</h1>
-            <p>Have questions or want to get in touch? We'd love to hear from you!</p>
-        </div>
-        <div class="contact_inputs">
-            <div class="input">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <input type="number" placeholder="Your Phone">
-            </div>
-            <textarea name="" id="" placeholder="Type Your Message"></textarea>
-        </div>
-        <div class="contact_button">
-            <button>Send Message</button>
-        </div>
-        <div class="addres_det">
-            <div class="addres_box">
-                <!--Icon-->
-                <i class="ri-phone-fill"></i>
-                <h2>WhatsApp</h2>
-                <p>+62-856-4839-4135</p>
-            </div>
-            <div class="addres_box">
-                <!--Icon-->
-                <i class="ri-mail-line"></i>
-                <h2>Email</h2>
-                <p>farhanbagask@gmail.com</p>
-            </div>
-            <div class="addres_box">
-                <!--Icon-->
-                <i class="ri-linkedin-fill"></i>
-                <h2>LinkedIn</h2>
-                <p>farhan-rizqullah-bagaskara</p>
-            </div>
-        </div>
-    </section>
-    <!-- FOOTER COPYRIGHT-->
-    <section class="footer">
-        <p>&copy; 2026 Your Company. All rights reserved By <span>Farhan Rizqullah Bagaskara</span>.</p>
-        <div class="footer_social">
-            <i class="ri-instagram-fill"></i>
-            <i class="ri-linkedin-fill"></i>
-            <i class="ri-facebook-fill"></i>
-        </div>
-    </section>
-    <!-- MIXITUP FILTERS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-    <!-- Typed JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
-    <!-- Swiper Slider JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
