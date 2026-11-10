@@ -117,6 +117,7 @@ const technicalSkillCategories = [
       { name: 'Laravel', core: true, used: 'Sistem Pusaka' },
       { name: 'PHP', core: true, used: 'Sistem Pusaka' },
       { name: 'JavaScript', core: true, used: 'Semua proyek web' },
+      { name: 'TypeScript', core: true },
       { name: 'HTML & CSS', core: true },
       { name: 'MySQL', core: true, used: 'Sipalu, MDM' },
       { name: 'REST API', core: true }
@@ -138,6 +139,7 @@ const technicalSkillCategories = [
       { name: 'Python', core: true, used: 'CNN Dashboard' },
       { name: 'Deep Learning (CNN)', core: true, used: 'CNN Dashboard' },
       { name: 'openCV', core: true },
+      { name: 'BERT', core: true },
       { name: 'TensorFlow & Keras', core: true },
       { name: 'Scikit-learn', core: true }
     ]
@@ -200,18 +202,23 @@ if (downloadCvBtn) {
 // Project Data for Lightbox
 const projectsData = [
   {
-    id: 0,
-    cat: 'Research & Publications',
-    title: 'Perancangan Sistem Integrasi Data Pelanggaran Lalu Lintas Berbasis Web Dengan Metode Waterfall Di Pos Satlantas Pada Kawasan Tertib Lalu Lintas Polres Gresik',
-    desc: 'JATI (Jurnal Mahasiswa Teknik Informatika).',
-    tech: ['Jurnal Ilmiah', 'Sistem Informasi', 'Waterfall'],
+    id: 1,
+    cat: 'Sentiment Analysis',
+    title: 'Media Comment Insight Analyzer',
+    desc: 'Platform analitik komentar media sosial untuk mendukung monitoring dan evaluasi komunikasi publik Satlantas Polres Gresik.',
+    tech: ['JavaScript', 'PostgreSQL', 'Python', 'TypeScript', 'Python', 'BERT'],
     slides: [
-      { img: 'images/sipalu.png', caption: 'Research overview and model architecture' }
+      { img: 'images/CommentAnalyzer/1.png', caption: 'Login page — Secure officer authentication' },
+      { img: 'images/CommentAnalyzer/2.png', caption: 'Main dashboard — Data Insight overview' },
+      { img: 'images/CommentAnalyzer/3.png', caption: 'Import Pages - CSV' },
+      { img: 'images/CommentAnalyzer/4.png', caption: 'Analysis History' },
+      { img: 'images/CommentAnalyzer/5.png', caption: 'Analysis Results - Detailed 1' },
+      { img: 'images/CommentAnalyzer/6.png', caption: 'Analysis Results - Detailed 1' }
     ],
-    github: 'https://garuda.kemdiktisaintek.go.id/documents/detail/4704357'
+    github: 'https://github.com/farhanrbagask/media-comment-insight-analyzer.git'
   },
   {
-    id: 1,
+    id: 2,
     cat: 'Web Application',
     title: 'Pusaka - Pusat Alat Tulis Kantor HIMATIF',
     desc: 'Website ini merupakan media informasi badan usaha HIMATIF yang menyediakan layanan alat tulis kantor (ATK), printing, fotokopi, percetakan, dan kebutuhan administrasi lainnya. Website ini hadir untuk memudahkan mahasiswa dan masyarakat memperoleh layanan secara cepat, praktis, dan efisien.',
@@ -227,7 +234,7 @@ const projectsData = [
     github: 'https://github.com/farhanrbagask/web-pusaka.git'
   },
   {
-    id: 2,
+    id: 3,
     cat: 'Deep Learning CNN Xception - Web Application',
     title: 'DCNN Xception for AI Generated Image Detection',
     desc: 'Project ini merupakan implementasi Deep Learning berbasis Convolutional Neural Network (CNN) untuk mendeteksi apakah sebuah gambar merupakan gambar asli atau gambar yang dihasilkan oleh Artificial Intelligence.',
@@ -241,7 +248,7 @@ const projectsData = [
     github: 'https://github.com/farhanrbagask/cnn-xception-detection-image-generated-by-ai.git'
   },
   {
-    id: 3,
+    id: 4,
     cat: 'Forecasting - Web Application',
     title: 'Peramalan Penjualan Menggunakan Metode Weighted Moving Averages',
     desc: 'Aplikasi web untuk memprediksi penjualan menggunakan metode Weighted Moving Average (WMA). Project ini dibangun dengan Laravel dan dilengkapi fitur pengelolaan data penjualan, perhitungan prediksi, evaluasi akurasi menggunakan MAPE (Mean Absolute Percentage Error), serta export hasil ke Excel.',
@@ -256,7 +263,7 @@ const projectsData = [
     github: 'https://github.com/farhanrbagask/weighted-moving-average-forecasting.git'
   },
   {
-    id: 4,
+    id: 5,
     cat: 'Data Mining - Naive Bayes - Web Application',
     title: 'Prediksi Kerusakan Laptop',
     desc: 'Aplikasi web untuk melakukan prediksi kerusakan laptop menggunakan algoritma Naive Bayes berdasarkan data gejala atau kondisi perangkat. Aplikasi ini dibangun menggunakan Laravel sebagai framework pengembangan web dan MySQL sebagai database. Sistem menyediakan pengelolaan data latih, data uji, proses perhitungan Naive Bayes, hasil prediksi, serta detail perhitungan probabilitas yang digunakan dalam menentukan jenis kerusakan laptop.',
@@ -272,7 +279,7 @@ const projectsData = [
     github: 'https://github.com/farhanrbagask/prediksi-kerusakan-laptop.git'
   },
   {
-    id: 5,
+    id: 6,
     cat: 'Mobile Device Management - Web Application',
     title: 'Mobile Device Management System',
     desc: 'Mengelola perangkat Android perusahaan melalui sistem Mobile Device Management (MDM), mencakup proses provisioning dan konfigurasi perangkat secara terpusat, penerapan kebijakan keamanan, pengelolaan aplikasi dan akses pengguna, serta monitoring status perangkat untuk memastikan keamanan, kepatuhan, dan kelancaran operasional.',

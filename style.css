@@ -532,28 +532,30 @@
     .lb-body { padding: 2rem; }
 
     /* LIGHTBOX SLIDESHOW */
-    .lb-slideshow {
-      position: relative;
-      height: 52vh;
-      overflow: hidden;
-      background: #000;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    }
-    .lb-slideshow .pc-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-    .lb-slideshow .pc-slide.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .lb-slideshow .pc-slide img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
+.lb-slideshow {
+  position: relative;
+  height: auto; /* Tinggi otomatis menyesuaikan gambar */
+  overflow: hidden;
+  background: #000;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.lb-slideshow .pc-slide {
+  display: none; /* Sembunyikan slide yang tidak aktif */
+  position: relative;
+}
+
+.lb-slideshow .pc-slide.active {
+  display: block; /* Tampilkan slide aktif agar tingginya terbaca oleh induk */
+}
+
+.lb-slideshow .pc-slide img {
+  display: block;
+  width: 100%;
+  height: auto; /* Lebar penuh 100%, tinggi proporsional tanpa terpotong */
+  max-height: 75vh; /* Batas tinggi maksimal agar modal tidak melebihi layar */
+  object-fit: cover;
+}
     .lb-slideshow .pc-slide-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
